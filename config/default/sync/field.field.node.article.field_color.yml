@@ -1,0 +1,22 @@
+uuid: 0e78e96d-7125-4f50-960d-b81de45d64a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_color
+    - node.type.article
+  module:
+    - color_field
+id: node.article.field_color
+field_name: field_color
+entity_type: node
+bundle: article
+label: Color
+description: 'Enter the hex value of a color to have as the background in the "hero" section. Entering none will result in this rendering white.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

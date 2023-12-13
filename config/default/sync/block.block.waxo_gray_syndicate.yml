@@ -1,0 +1,23 @@
+uuid: f4f0a295-d2af-4b43-80b9-9a81274aefc0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - waxo_gray
+_core:
+  default_config_hash: 0gq3VPg-_UM69FCCWurLFIrrnIjC2HLKhwo9iQNtcUo
+id: waxo_gray_syndicate
+theme: waxo_gray
+region: header
+weight: 0
+provider: null
+plugin: node_syndicate_block
+settings:
+  id: node_syndicate_block
+  label: 'RSS feed'
+  label_display: '0'
+  provider: node
+  block_count: 10
+visibility: {  }

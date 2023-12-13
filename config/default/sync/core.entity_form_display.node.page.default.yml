@@ -4,8 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
+    - field.field.node.page.field_footer_image
+    - field.field.node.page.field_image
+    - field.field.node.page.field_subtitle
+    - field.field.node.page.layout_builder__layout
     - node.type.page
   module:
+    - media_library
     - path
     - text
 _core:
@@ -30,6 +35,28 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_footer_image:
+    type: media_library_widget
+    weight: 122
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 121
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_subtitle:
+    type: string_textfield
+    weight: 123
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   path:
     type: path
@@ -76,4 +103,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  layout_builder__layout: true

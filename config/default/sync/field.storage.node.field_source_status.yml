@@ -1,0 +1,27 @@
+uuid: d0a25c8a-aa93-4e70-84bf-9ef9b056133c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_source_status
+field_name: field_source_status
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: open
+      label: Open
+    -
+      value: closed
+      label: Closed
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

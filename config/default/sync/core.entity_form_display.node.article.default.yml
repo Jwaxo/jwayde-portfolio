@@ -5,13 +5,21 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.comment
-    - field.field.node.article.field_image
+    - field.field.node.article.field_client
+    - field.field.node.article.field_color
+    - field.field.node.article.field_images
+    - field.field.node.article.field_skills_used
+    - field.field.node.article.field_source_status
+    - field.field.node.article.field_source_url
     - field.field.node.article.field_tags
-    - image.style.thumbnail
+    - field.field.node.article.field_thumbnail
+    - field.field.node.article.field_time_period
     - node.type.article
   module:
+    - color_field
     - comment
-    - image
+    - link
+    - media_library
     - path
     - text
 _core:
@@ -43,13 +51,52 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_image:
-    type: image_image
-    weight: 1
+  field_client:
+    type: string_textfield
+    weight: 128
     region: content
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_color:
+    type: color_field_widget_default
+    weight: 127
+    region: content
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
+    third_party_settings: {  }
+  field_images:
+    type: media_library_widget
+    weight: 125
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_skills_used:
+    type: entity_reference_autocomplete
+    weight: 124
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_source_status:
+    type: options_select
+    weight: 121
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_source_url:
+    type: link_default
+    weight: 123
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings: {  }
   field_tags:
     type: entity_reference_autocomplete_tags
@@ -58,6 +105,21 @@ content:
     settings:
       match_operator: CONTAINS
       match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_thumbnail:
+    type: media_library_widget
+    weight: 126
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_time_period:
+    type: string_textfield
+    weight: 122
+    region: content
+    settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }

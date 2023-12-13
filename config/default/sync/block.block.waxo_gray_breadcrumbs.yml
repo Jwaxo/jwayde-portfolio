@@ -1,0 +1,22 @@
+uuid: 59d42829-9a3f-46eb-abef-337502a42bdc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - waxo_gray
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: waxo_gray_breadcrumbs
+theme: waxo_gray
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

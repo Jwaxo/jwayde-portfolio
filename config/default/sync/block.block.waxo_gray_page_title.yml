@@ -1,0 +1,20 @@
+uuid: 69ef5bc9-f3cc-4a81-abea-72f61bd13d0d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - waxo_gray
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: waxo_gray_page_title
+theme: waxo_gray
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

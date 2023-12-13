@@ -1,0 +1,22 @@
+uuid: e5166753-a604-4859-8a0a-afc458ab315a
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - waxo_gray
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: waxo_gray_help
+theme: waxo_gray
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }
