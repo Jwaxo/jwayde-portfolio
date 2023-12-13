@@ -1,0 +1,5 @@
+waxo_blocks:
+  version: 1.x
+  css:
+    layout:
+      css/waxo_blocks.css: {}

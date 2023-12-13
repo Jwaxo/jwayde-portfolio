@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Contains library file requirement check and update hooks.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function imagefield_zoom_requirements($phase) {
+  $requirements = [];
+
+  switch ($phase) {
+    case 'install':
+    case 'runtime':
+      $plugin_detected = FALSE;
+
+      $libraries_path = 'libraries/jquery_zoom';
+      if (\Drupal::hasService('library.libraries_directory_file_finder')) {
+        /** @var \Drupal\Core\Asset\LibrariesDirectoryFileFinder $library_file_finder */
+        $library_file_finder = \Drupal::service('library.libraries_directory_file_finder');
+        $libraries_path = $library_file_finder->find('jquery_zoom');
+      }
+      elseif (function_exists('libraries_get_path')) {
+        $libraries_path = libraries_get_path('jquery_zoom');
+      }
+
+      if (file_exists(DRUPAL_ROOT . '/' . $libraries_path . '/jquery.zoom.min.js')) {
+        $plugin_detected = TRUE;
+      }
+
+      if ($plugin_detected) {
+        $message = t('JQuery Zoom plugin detected in %path', ['%path' => '/libraries/jquery_zoom.']);
+      }
+      else {
+        $message = t('JQuery Zoom plugin was not found. Please download it here: https://github.com/jackmoore/zoom and put the jquery.zoom.min.js file in the root so that its path is: /libraries/jquery_zoom/jquery.zoom.min.js.');
+      }
+
+      $requirements['imagefield_zoom'] = [
+        'title' => t('Imagefield Zoom Plugin'),
+        'value' => $message,
+        'severity' => $plugin_detected ? REQUIREMENT_OK : REQUIREMENT_ERROR,
+      ];
+      break;
+  }
+
+  return $requirements;
+}

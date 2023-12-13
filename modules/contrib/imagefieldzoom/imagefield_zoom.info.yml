@@ -1,0 +1,13 @@
+name: Image Field Zoom
+type: module
+description: Provides field formatter for image fields to enlarge on touch, click, or mouseover.
+core_version_requirement: ^9.3 || ^10
+dependencies:
+  - drupal:image
+  - drupal:responsive_image
+  - drupal:field
+
+# Information added by Drupal.org packaging script on 2022-11-15
+version: '3.0.1'
+project: 'imagefieldzoom'
+datestamp: 1668525358

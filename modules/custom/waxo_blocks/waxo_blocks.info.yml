@@ -1,0 +1,5 @@
+name: Waxo Blocks
+type: module
+description: 'Custom code for Jeff Wax Blocks'
+package: Jeff Wax
+core_version_requirement: 10.x

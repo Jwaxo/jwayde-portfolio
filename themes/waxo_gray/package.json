@@ -1,0 +1,40 @@
+{
+  "name": "waxo_gray",
+  "version": "1.0.0",
+  "description": "The Node necessities for the Waxo Gray Drupal theme",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build",
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jwaxo/jwax-portfolio.git"
+  },
+  "keywords": [
+    "drupal",
+    "theme",
+    "waxo",
+    "gray"
+  ],
+  "author": "Jeff Wax <jeff@jeffwax.com> (http://jeffwax.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jwaxo/jwax-portfolio/issues"
+  },
+  "homepage": "jeffwax.com",
+  "browserslist": [
+    "defaults"
+  ],
+  "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "gulp": "^4.0.0",
+    "gulp-load-plugins": "^1.6.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.0.1",
+    "jquery": "^3.4.1",
+    "motion-ui": "^2.0.3",
+    "postcss": "^8.2.14"
+  }
+}
