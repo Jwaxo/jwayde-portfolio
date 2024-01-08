@@ -36,6 +36,7 @@
 
 # Ignore vendor dependencies and scripts
 /vendor
+/libraries
 /composer.phar
 /composer
 /robo.phar
@@ -45,3 +46,4 @@
 /drupal.phar
 /drupal
 /modules/contrib
+/.DS_Store
