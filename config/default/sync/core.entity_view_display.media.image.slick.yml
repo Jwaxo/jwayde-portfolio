@@ -1,18 +1,24 @@
-uuid: 2f6bbf35-d1d0-4cc7-88a7-898f55bbf073
+uuid: 290fce5e-b39e-460f-96cf-8a55f846db39
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.slick
     - field.field.media.image.field_media_image
     - media.type.image
   module:
     - imagefield_zoom
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
-id: media.image.default
+id: media.image.slick
 targetEntityType: media
 bundle: image
-mode: default
+mode: slick
 content:
   field_media_image:
     type: imagezoom_field_formatter
@@ -20,11 +26,11 @@ content:
     settings:
       image_style: large
       zoomed_image_style: ''
-      responsive_image_style: ''
+      responsive_image_style: narrow
       image_zoom_style: mouseover
-      image_touchscreen_compatible: true
-      image_magnify: 1
-      image_fade_duration: 120
+      image_touchscreen_compatible: '1'
+      image_magnify: '1'
+      image_fade_duration: '120'
     third_party_settings: {  }
     weight: 1
     region: content

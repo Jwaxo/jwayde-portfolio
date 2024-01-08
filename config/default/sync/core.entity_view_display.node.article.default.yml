@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment.default
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_client
@@ -15,12 +14,15 @@ dependencies:
     - field.field.node.article.field_tags
     - field.field.node.article.field_thumbnail
     - field.field.node.article.field_time_period
+    - image.style.large
+    - image.style.wide
     - node.type.article
+    - responsive_image.styles.narrow
+    - responsive_image.styles.wide
   module:
-    - color_field
-    - comment
     - link
     - options
+    - slick
     - text
     - user
 _core:
@@ -35,16 +37,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 0
-    region: content
-  comment:
-    type: comment_default
-    label: above
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    weight: 110
+    weight: 6
     region: content
   field_client:
     type: string
@@ -52,25 +45,71 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 118
-    region: content
-  field_color:
-    type: color_field_formatter_text
-    label: above
-    settings:
-      format: hex
-      opacity: true
-    third_party_settings: {  }
-    weight: 117
+    weight: 1
     region: content
   field_images:
-    type: entity_reference_entity_view
-    label: above
+    type: slick_media
+    label: hidden
     settings:
+      caption:
+        alt: alt
+        title: '0'
+      optionset: default
+      class: ''
+      image: ''
+      link: ''
+      overlay: ''
+      title: ''
+      vanilla: false
+      layout: ''
       view_mode: default
-      link: false
+      cache: 0
+      background: false
+      box_caption: alt
+      box_caption_custom: ''
+      box_media_style: ''
+      loading: ''
+      preload: false
+      responsive_image_style: narrow
+      use_theme_field: false
+      box_style: wide
+      image_style: large
+      media_switch: rendered
+      ratio: ''
+      thumbnail_style: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      style: ''
+      svg_inline: false
+      svg_fill: false
+      svg_sanitize: true
+      svg_sanitize_remote: false
+      svg_hide_caption: false
+      svg_attributes: ''
+      skin: ''
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      thumbnail: ''
+      optionset_thumbnail: ''
+      skin_thumbnail: ''
+      thumbnail_caption: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      override: false
+      skin_arrows: ''
+      skin_dots: ''
+      preserve_keys: false
+      visible_items: null
     third_party_settings: {  }
-    weight: 115
+    weight: 0
     region: content
   field_skills_used:
     type: entity_reference_label
@@ -78,14 +117,14 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 114
+    weight: 7
     region: content
   field_source_status:
     type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 111
+    weight: 3
     region: content
   field_source_url:
     type: link
@@ -97,7 +136,7 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 113
+    weight: 4
     region: content
   field_tags:
     type: entity_reference_label
@@ -105,16 +144,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 10
-    region: content
-  field_thumbnail:
-    type: entity_reference_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    weight: 116
+    weight: 2
     region: content
   field_time_period:
     type: string
@@ -122,11 +152,10 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 112
+    weight: 5
     region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
-    region: content
-hidden: {  }
+hidden:
+  comment: true
+  field_color: true
+  field_thumbnail: true
+  links: true
