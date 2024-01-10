@@ -35,8 +35,8 @@ function waxo_gray_preprocess_page(&$variables) {
   // Sets the color value to be placed into the hero.
   if (isset($variables['node'])) {
     $node = $variables['node'];
-    if ($node->hasField('field_color')) {
-      $variables['color_hex'] = '#' . $node->get('field_color')->value;
+    if ($node->hasField('field_color') && $node->get('field_color')->first()) {
+      $variables['color_hex'] = $node->get('field_color')->first()->get('color')->getValue();
     }
 
     if ($node->hasField('field_footer_image')) {
@@ -74,8 +74,8 @@ function waxo_gray_preprocess_block(&$variables) {
     if (isset($variables['content'][0]['#title'])) {
       $variables['title_attributes']['id'] = Html::cleanCSSIdentifier($variables['content'][0]['#title']);
     }
-    elseif (isset($variables['content'][0]['#display_id'])) {
-      $variables['title_attributes']['id'] = $variables['content'][0]['#display_id'];
+    elseif (isset($variables['content']['#display_id'])) {
+      $variables['title_attributes']['id'] = $variables['content']['#display_id'];
     }
   }
 }
