@@ -4,6 +4,10 @@
 
 header {
   background-color: palette($layout-colors, header, bg);
+
+  &.header--page {
+    background-color: transparent;
+  }
 }
 
 main {

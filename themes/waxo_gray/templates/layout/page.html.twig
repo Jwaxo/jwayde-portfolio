@@ -45,7 +45,7 @@
 #}
 <div class="layout-container">
 
-  <header role="banner">
+  <header role="banner" {% if header_class %}class="{{ header_class }}"{% endif %}>
     <div class="container">
       {{ page.header }}
 

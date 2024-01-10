@@ -42,17 +42,14 @@ function waxo_gray_preprocess_page(&$variables) {
     if ($node->hasField('field_footer_image')) {
       $image = [];
       $image_media = $node->get('field_footer_image');
-      if ($image_media && isset($image_media->entity)) {
-        // $image['url'] = $image_media->entity->createFileUrl(FALSE);
-
-        // if (isset($image['url'])) {
-
-        //   $image['alt'] = $image_media->first()->get('alt')->getValue();
-        // }
-
-        // $variables['footer_image'] = $image;
+      if ($image_media) {
+        $image = _waxo_gray_get_image_from_media($image_media);
+        if (!empty($image)) {
+          $variables['footer_image'] = $image;
+        }
       }
     }
+    $variables['header_class'] = "header--" . $node->getType();
   }
 }
 
@@ -74,11 +71,11 @@ function waxo_gray_preprocess_node(&$variables) {
 function waxo_gray_preprocess_block(&$variables) {
   // Give the block an ID so we can link directly to it.
   if (!isset($variables['title_attributes']['id'])) {
-    if (isset($variables['content']['#title'])) {
-      $variables['title_attributes']['id'] = Html::cleanCSSIdentifier($variables['content']['#title']);
+    if (isset($variables['content'][0]['#title'])) {
+      $variables['title_attributes']['id'] = Html::cleanCSSIdentifier($variables['content'][0]['#title']);
     }
-    elseif (isset($variables['content']['#display_id'])) {
-      $variables['title_attributes']['id'] = $variables['content']['#display_id'];
+    elseif (isset($variables['content'][0]['#display_id'])) {
+      $variables['title_attributes']['id'] = $variables['content'][0]['#display_id'];
     }
   }
 }
@@ -98,20 +95,32 @@ function waxo_gray_preprocess_field(&$variables) {
     $image = [];
     $image_media = $entity->get('field_image');
     if ($image_media) {
-      $media_entity = $image_media->entity;
-      $file = File::load($media_entity->field_media_image->target_id);
-
-      $image['url'] = \Drupal::service('file_url_generator')->generate($file->getFileUri());
-
-      if (isset($image['url'])) {
-        $image['alt'] = $media_entity->alt;
+      $image = _waxo_gray_get_image_from_media($image_media);
+      if (!empty($image)) {
+        $variables['image'] = $image;
       }
-
-      $variables['image'] = $image;
     }
 
     if ($subtitle = $entity->get('field_subtitle')) {
       $variables['subtitle'] = $subtitle->value;
     }
   }
+}
+
+/**
+ * Take a media field and return a simple array of the image URL and ALT.
+ */
+function _waxo_gray_get_image_from_media($media_field) {
+  $image = [];
+
+  $media_entity = $media_field->entity;
+  $file = File::load($media_entity->field_media_image->target_id);
+
+  $image['url'] = \Drupal::service('file_url_generator')->generate($file->getFileUri());
+
+  if (isset($image['url'])) {
+    $image['alt'] = $media_entity->alt;
+  }
+
+  return $image;
 }
