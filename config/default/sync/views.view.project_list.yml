@@ -187,8 +187,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
-  block_1:
-    id: block_1
+  portfolio:
+    id: portfolio
     display_title: Block
     display_plugin: block
     position: 1
