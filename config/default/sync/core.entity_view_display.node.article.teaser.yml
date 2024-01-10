@@ -17,7 +17,7 @@ dependencies:
     - field.field.node.article.field_time_period
     - node.type.article
   module:
-    - text
+    - media
     - user
 _core:
   default_config_hash: 83jX5ChAGdMzOxiDA_B1NjgebVMuD8lNVDgClg_QVP8
@@ -26,26 +26,19 @@ targetEntityType: node
 bundle: article
 mode: teaser
 content:
-  body:
-    type: text_summary_or_trimmed
+  field_thumbnail:
+    type: media_thumbnail
     label: hidden
     settings:
-      trim_length: 600
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 0
     region: content
-  field_tags:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 10
-    region: content
-  links:
-    weight: 100
-    region: content
 hidden:
+  body: true
   comment: true
   field_client: true
   field_color: true
@@ -54,5 +47,5 @@ hidden:
   field_source_status: true
   field_source_url: true
   field_tags: true
-  field_thumbnail: true
   field_time_period: true
+  links: true

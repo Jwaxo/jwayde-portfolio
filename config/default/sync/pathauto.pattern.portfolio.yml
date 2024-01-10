@@ -1,0 +1,22 @@
+uuid: e0fb2e2d-7b1b-43a1-80fc-64e0100d4f3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: portfolio
+label: Portfolio
+type: 'canonical_entities:node'
+pattern: '/work/[node:title]'
+selection_criteria:
+  f87fef4e-442d-4b61-a7cd-06f36a346506:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: f87fef4e-442d-4b61-a7cd-06f36a346506
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+selection_logic: and
+weight: -5
+relationships: {  }

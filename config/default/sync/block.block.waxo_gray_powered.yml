@@ -10,8 +10,8 @@ _core:
   default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
 id: waxo_gray_powered
 theme: waxo_gray
-region: header
-weight: 0
+region: disabled
+weight: -6
 provider: null
 plugin: system_powered_by_block
 settings:

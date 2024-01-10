@@ -1,4 +1,6 @@
 name: jwayde-portfolio
 recipe: drupal10
 config:
-  webroot: .
+  xdebug: true
+  conf:
+    php: .lando.php.ini

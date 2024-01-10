@@ -6,6 +6,8 @@
  */
 
 use \Drupal\Component\Utility\Html;
+use \Drupal\file\Entity\File;
+use \Drupal\Core\Url;
 
 /**
  * Implements hook_theme_suggestions_field_alter().
@@ -41,14 +43,14 @@ function waxo_gray_preprocess_page(&$variables) {
       $image = [];
       $image_media = $node->get('field_footer_image');
       if ($image_media && isset($image_media->entity)) {
-        $image['url'] = $image_media->entity->createFileUrl(FALSE);
+        // $image['url'] = $image_media->entity->createFileUrl(FALSE);
 
-        if (isset($image['url'])) {
+        // if (isset($image['url'])) {
 
-          $image['alt'] = $image_media->first()->get('alt')->getValue();
-        }
+        //   $image['alt'] = $image_media->first()->get('alt')->getValue();
+        // }
 
-        $variables['footer_image'] = $image;
+        // $variables['footer_image'] = $image;
       }
     }
   }
@@ -96,11 +98,13 @@ function waxo_gray_preprocess_field(&$variables) {
     $image = [];
     $image_media = $entity->get('field_image');
     if ($image_media) {
-      $image['url'] = $image_media->entity->createFileUrl(FALSE);
+      $media_entity = $image_media->entity;
+      $file = File::load($media_entity->field_media_image->target_id);
+
+      $image['url'] = \Drupal::service('file_url_generator')->generate($file->getFileUri());
 
       if (isset($image['url'])) {
-
-        $image['alt'] = $image_media->first()->get('alt')->getValue();
+        $image['alt'] = $media_entity->alt;
       }
 
       $variables['image'] = $image;
