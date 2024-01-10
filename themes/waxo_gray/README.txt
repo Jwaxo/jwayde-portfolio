@@ -7,7 +7,7 @@ at jeffwax.com. If you're not there, hey, thanks for checking out my repo.
 HOW TO THEME
 ------------
 
-From this directory, run `fin npm dev`. This should begin watching all .scss
+From this directory, run `gulp dev`. This should begin watching all .scss
 files in the scss directory and outputting any changes to app.css. All of the
 rest should be the same as your typical Drupal theming.
 
