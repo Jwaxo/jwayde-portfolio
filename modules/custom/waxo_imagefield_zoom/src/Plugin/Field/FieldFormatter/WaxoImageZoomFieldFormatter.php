@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\imagefield_zoom\Plugin\Field\FieldFormatter;
+namespace Drupal\waxo_imagefield_zoom\Plugin\Field\FieldFormatter;
 
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\File\FileUrlGeneratorInterface;
@@ -15,17 +15,17 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Cache\Cache;
 
 /**
- * Plugin implementation of the 'imagezoom_field_formatter' formatter.
+ * Plugin implementation of the 'waxo_imagezoom_field_formatter' formatter.
  *
  * @FieldFormatter(
- *   id = "imagezoom_field_formatter",
+ *   id = "waxo_imagezoom_field_formatter",
  *   label = @Translation("Image Zoom"),
  *   field_types = {
  *     "image"
  *   }
  * )
  */
-class ImageZoomFieldFormatter extends ImageFormatterBase implements ContainerFactoryPluginInterface {
+class WaxoImageZoomFieldFormatter extends ImageFormatterBase implements ContainerFactoryPluginInterface {
 
   /**
    * The current user.
@@ -402,7 +402,7 @@ class ImageZoomFieldFormatter extends ImageFormatterBase implements ContainerFac
     }
 
     return [
-      '#theme' => 'imagefield_zoom',
+      '#theme' => 'waxo_imagefield_zoom',
       '#images' => $images,
       'field_name' => [$field_name],
       '#attached' => [

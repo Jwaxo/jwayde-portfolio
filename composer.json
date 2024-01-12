@@ -39,8 +39,6 @@
         "drupal/core-recommended": "^10.1",
         "drupal/core-vendor-hardening": "^10.1",
         "drupal/ctools": "^4.0",
-        "drupal/imagefield_zoom": "^3.0",
-        "drupal/imagefieldzoom": "^3.0",
         "drupal/pathauto": "^1.12",
         "drupal/seven": "^1.0",
         "drupal/slick": "^2.10",
@@ -59,7 +57,8 @@
             "drupal/core-project-message": true,
             "drupal/core-vendor-hardening": true,
             "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true
         },
         "sort-packages": true
     },

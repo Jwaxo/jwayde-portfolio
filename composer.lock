@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cfd26c76090d1cede098390854abf92d",
+    "content-hash": "34d78e3dd702d1cc2a2c8368c56b398d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1988,94 +1988,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/ctools",
                 "issues": "https://www.drupal.org/project/issues/ctools"
-            }
-        },
-        {
-            "name": "drupal/imagefield_zoom",
-            "version": "3.0.1",
-            "require": {
-                "drupal/core": "^9.3 || ^10",
-                "drupal/imagefieldzoom": "^3"
-            },
-            "type": "metapackage",
-            "extra": {
-                "drupal": {
-                    "version": "3.0.1",
-                    "datestamp": "1668525357",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "George Anderson (geoanders)",
-                    "homepage": "https://www.drupal.org/u/geoanders",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "Utsav Shah (utsavjshah)",
-                    "homepage": "https://www.drupal.org/u/utsavjshah",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Provides field formatter for image fields to enlarge on touch, click, or mouseover.",
-            "homepage": "https://drupal.org/project/imagefieldzoom",
-            "support": {
-                "source": "https://git.drupalcode.org/project/imagefieldzoom",
-                "issues": "https://drupal.org/project/issues/imagefieldzoom"
-            }
-        },
-        {
-            "name": "drupal/imagefieldzoom",
-            "version": "3.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/imagefieldzoom.git",
-                "reference": "3.0.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/imagefieldzoom-3.0.1.zip",
-                "reference": "3.0.1",
-                "shasum": "b6c2491aaf5eea0636fc6235e8cebeee889db958"
-            },
-            "require": {
-                "drupal/core": "^9.3 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "3.0.1",
-                    "datestamp": "1668525357",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "geoanders",
-                    "homepage": "https://www.drupal.org/user/1270728"
-                },
-                {
-                    "name": "utsavjshah",
-                    "homepage": "https://www.drupal.org/user/2798763"
-                }
-            ],
-            "homepage": "https://www.drupal.org/project/imagefieldzoom",
-            "support": {
-                "source": "https://git.drupalcode.org/project/imagefieldzoom"
             }
         },
         {

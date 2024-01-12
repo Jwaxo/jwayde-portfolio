@@ -1,58 +1,75 @@
-# Jeff Wayde Portfolio Site
+<img alt="Drupal Logo" src="https://www.drupal.org/files/Wordmark_blue_RGB.png" height="60px">
 
-If you're reading this, you're either looking to see how I threw together my fun
-little personal website, or you're me, trying to figure out how to get it
-working again. Either way, thanks for checking the Readme! I'm a strong believer
-in documentation, especially when I'm not the one writing it.
+Drupal is an open source content management platform supporting a variety of
+websites ranging from personal weblogs to large community-driven websites. For
+more information, visit the Drupal website, [Drupal.org][Drupal.org], and join
+the [Drupal community][Drupal community].
 
-## Installation
+## Contributing
 
-This site, when it's not hosted on a live server, is expected to run using [Lando](https://docs.lando.dev/),
-with its styles generated and compiled via Gulp. These should both be very easy
-and straightforward to get set up on your own machine.
+Drupal is developed on [Drupal.org][Drupal.org], the home of the international
+Drupal community since 2001!
 
-While you shouldn't need to install anything other than NPM to get the theme
-running, you will need Lando installed locally.
+[Drupal.org][Drupal.org] hosts Drupal's [GitLab repository][GitLab repository],
+its [issue queue][issue queue], and its [documentation][documentation]. Before
+you start working on code, be sure to search the [issue queue][issue queue] and
+create an issue if your aren't able to find an existing issue.
 
-1. Clone this code locally: `git clone git@github.com:Jwaxo/jwayde-portfolio.git`
-1. Go into the root folder of the repo: `cd jwayde-portfolio`
-1. Start the server: `lando start`
-1. Create a `settings.local.php` file in /sites/default, then paste the following
-into it:
-```
-<?php
+Every issue on Drupal.org automatically creates a new community-accessible fork
+that you can contribute to. Learn more about the code contribution process on
+the [Issue forks & merge requests page][issue forks].
 
-$databases['default']['default'] = array (
-  'database' => 'drupal10',
-  'username' => 'drupal10',
-  'password' => 'drupal10',
-  'prefix' => '',
-  'host' => 'database',
-  'port' => '',
-  'isolation_level' => 'READ COMMITTED',
-  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
-  'driver' => 'mysql',
-  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
-);
+## Usage
 
-$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
-$settings['cache']['bins']['page'] = 'cache.backend.null';
-$settings['cache']['bins']['render'] = 'cache.backend.null';
-$config['system.logging']['error_level'] = 'verbose';
-$config['system.performance']['css']['preprocess'] = FALSE;
-$config['system.performance']['js']['preprocess'] = FALSE;
-```
-1. If you have a database (I'm forced to manually grab one from PHPMyAdmin), get
-it installed: `lando db-import [database service]`
-1. Go to jwayde-portfolio.lndo.site to see (hopefully) the site!
+For a brief introduction, see [USAGE.txt](/core/USAGE.txt). You can also find
+guides, API references, and more by visiting Drupal's [documentation
+page][documentation].
 
-## Theming
+You can quickly extend Drupal's core feature set by installing any of its
+[thousands of free and open source modules][modules]. With Drupal and its
+module ecosystem, you can often build most or all of what your project needs
+before writing a single line of code.
 
-Theming uses SCSS and compiles using Gulp, and is all contained in waxo_gray, a
-theme I created on Drupal 8 when my last name was still Wax.
+## Changelog
 
-1. Navigate to the theme: `cd themes/waxo_gray`
-1. Install everything necessary: `npm install`
-1. Start up gulp! `gulp dev`
+Drupal keeps detailed [change records][changelog]. You can search Drupal's
+changes for a record of every notable breaking change and new feature since
+2011.
 
-That should do you, honestly. The theme has its own Readme for extra info.
+## Security
+
+For a list of security announcements, see the [Security advisories
+page][Security advisories] (available as [an RSS feed][security RSS]). This
+page also describes how to subscribe to these announcements via email.
+
+For information about the Drupal security process, or to find out how to report
+a potential security issue to the Drupal security team, see the [Security team
+page][security team].
+
+## Need a helping hand?
+
+Visit the [Support page][support] or browse [over a thousand Drupal
+providers][service providers] offering design, strategy, development, and
+hosting services.
+
+## Legal matters
+
+Know your rights when using Drupal by reading Drupal core's
+[license](/core/LICENSE.txt).
+
+Learn about the [Drupal trademark and logo policy here][trademark].
+
+[Drupal.org]: https://www.drupal.org
+[Drupal community]: https://www.drupal.org/community
+[GitLab repository]: https://git.drupalcode.org/project/drupal
+[issue queue]: https://www.drupal.org/project/issues/drupal
+[issue forks]: https://www.drupal.org/drupalorg/docs/gitlab-integration/issue-forks-merge-requests
+[documentation]: https://www.drupal.org/documentation
+[changelog]: https://www.drupal.org/list-changes/drupal
+[modules]: https://www.drupal.org/project/project_module
+[security advisories]: https://www.drupal.org/security
+[security RSS]: https://www.drupal.org/security/rss.xml
+[security team]: https://www.drupal.org/drupal-security-team
+[service providers]: https://www.drupal.org/drupal-services
+[support]: https://www.drupal.org/support
+[trademark]: https://www.drupal.com/trademark

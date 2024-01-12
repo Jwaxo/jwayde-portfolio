@@ -3,6 +3,10 @@
 Image Field Zoom provides a field formatter that allows you to apply it to
 your image field.
 
+This is the Wayde version of the Drupal contrib module, with enough changes that
+I decided not to patch it and just add it straight up to my repo. All of the
+remaining documentation is the same, except where noted.
+
 ### Install
 
 * Install module and enable like any other contrib module.
