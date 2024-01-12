@@ -45,7 +45,7 @@
 #}
 <div class="layout-container">
 
-  <header role="banner" {% if header_class %}class="{{ header_class }}"{% endif %}>
+  <header role="banner" {% if header_class %}class="{{ header_class }}"{% endif %} style="background-color: {{ color_hex }}">
     <div class="container">
       {{ page.header }}
 
@@ -54,7 +54,7 @@
     </div>
   </header>
 
-  <main role="main" style="background-color: {{ color_hex }}">
+  <main role="main">
     <div class="container">
       {{ page.highlighted }}
 
