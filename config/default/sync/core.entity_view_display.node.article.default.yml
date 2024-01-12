@@ -37,38 +37,6 @@ third_party_settings:
         layout_settings:
           label: ''
         components:
-          254d6730-43d5-461f-a936-93216d6342be:
-            uuid: 254d6730-43d5-461f-a936-93216d6342be
-            region: content
-            configuration:
-              id: 'field_block:node:article:field_client'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: string
-                label: above
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 2
-            additional: {  }
-          3931245f-25c4-4650-8cf1-2eae4e3f2442:
-            uuid: 3931245f-25c4-4650-8cf1-2eae4e3f2442
-            region: content
-            configuration:
-              id: 'field_block:node:article:field_tags'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 3
-            additional: {  }
           d995f43c-03a0-4c2a-82d1-f982de682670:
             uuid: d995f43c-03a0-4c2a-82d1-f982de682670
             region: content
@@ -82,7 +50,7 @@ third_party_settings:
                 label: above
                 settings: {  }
                 third_party_settings: {  }
-            weight: 4
+            weight: 5
             additional: {  }
           723d775d-343a-4539-9ade-c1e84747d3a3:
             uuid: 723d775d-343a-4539-9ade-c1e84747d3a3
@@ -102,7 +70,7 @@ third_party_settings:
                   rel: ''
                   target: ''
                 third_party_settings: {  }
-            weight: 5
+            weight: 6
             additional: {  }
           e537f607-28af-46b8-b96a-bf61670cd06c:
             uuid: e537f607-28af-46b8-b96a-bf61670cd06c
@@ -118,7 +86,7 @@ third_party_settings:
                 settings:
                   link_to_entity: false
                 third_party_settings: {  }
-            weight: 6
+            weight: 7
             additional: {  }
           470b7afb-3861-4059-8bc9-ad6691356ea4:
             uuid: 470b7afb-3861-4059-8bc9-ad6691356ea4
@@ -132,22 +100,6 @@ third_party_settings:
                 type: text_default
                 label: hidden
                 settings: {  }
-                third_party_settings: {  }
-            weight: 7
-            additional: {  }
-          4d87d00c-8da2-4d2b-ae8e-798b6046d61d:
-            uuid: 4d87d00c-8da2-4d2b-ae8e-798b6046d61d
-            region: content
-            configuration:
-              id: 'field_block:node:article:field_skills_used'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
                 third_party_settings: {  }
             weight: 8
             additional: {  }
@@ -169,6 +121,60 @@ third_party_settings:
                   view_mode: slick
                 third_party_settings: {  }
             weight: 1
+            additional: {  }
+          254d6730-43d5-461f-a936-93216d6342be:
+            uuid: 254d6730-43d5-461f-a936-93216d6342be
+            region: content
+            configuration:
+              id: 'field_block:node:article:field_client'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          3931245f-25c4-4650-8cf1-2eae4e3f2442:
+            uuid: 3931245f-25c4-4650-8cf1-2eae4e3f2442
+            region: content
+            configuration:
+              id: 'field_block:node:article:field_tags'
+              label: 'Filed Under'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 10
+            additional: {  }
+          4d87d00c-8da2-4d2b-ae8e-798b6046d61d:
+            uuid: 4d87d00c-8da2-4d2b-ae8e-798b6046d61d
+            region: content
+            configuration:
+              id: 'field_block:node:article:field_skills_used'
+              label: 'Skills Used'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_label
+                label: inline
+                settings:
+                  link: false
+                third_party_settings: {  }
+            weight: 9
             additional: {  }
         third_party_settings: {  }
 _core:

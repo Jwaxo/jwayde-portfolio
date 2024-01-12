@@ -11,6 +11,7 @@
   background-color: rgba(0,0,0,.2);
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
   overflow: hidden;
   padding: 20px;
   text-align: center;
@@ -22,6 +23,11 @@
 
 .image-zoom {
   overflow: visible !important;
+  z-index: 2;
+}
+
+img.zoomImg {
+  z-index: 5;
 }
 
 .field--field_caption {

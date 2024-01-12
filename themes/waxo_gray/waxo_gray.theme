@@ -89,21 +89,27 @@ function waxo_gray_preprocess_field(&$variables) {
   $bundle = $variables['element']['#bundle'];
   $entity = $variables['element']['#object'];
 
-  if ($field_name === 'title' && $bundle === 'page') {
-    // Pages use a special Hero page title style, so we need to get the image
-    // and other fields to pass along.
-    $image = [];
-    $image_media = $entity->get('field_image');
-    if ($image_media) {
-      $image = _waxo_gray_get_image_from_media($image_media);
-      if (!empty($image)) {
-        $variables['image'] = $image;
-      }
-    }
+  switch ($field_name) {
+    case "title":
+      if ($bundle === 'page') {
+        // Pages use a special Hero page title style, so we need to get the image
+        // and other fields to pass along.
+        $image = [];
+        $image_media = $entity->get('field_image');
+        if ($image_media) {
+          $image = _waxo_gray_get_image_from_media($image_media);
+          if (!empty($image)) {
+            $variables['image'] = $image;
+          }
+        }
 
-    if ($subtitle = $entity->get('field_subtitle')) {
-      $variables['subtitle'] = $subtitle->value;
-    }
+        if ($subtitle = $entity->get('field_subtitle')) {
+          $variables['subtitle'] = $subtitle->value;
+        }
+      }
+
+      break;
+
   }
 }
 
