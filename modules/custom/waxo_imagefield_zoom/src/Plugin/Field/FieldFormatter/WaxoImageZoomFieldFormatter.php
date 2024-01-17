@@ -333,72 +333,49 @@ class WaxoImageZoomFieldFormatter extends ImageFormatterBase implements Containe
     // Loop over files.
     foreach ($files as $delta => $file) {
       $cache_contexts = [];
-      // Handle responsive image formatting.
-      if ($responsive_image_style) {
-        // Extract field item attributes for the theme function, and unset them
-        // from the $item so that the field template does not re-render them.
-        $item = $file->_referringItem;
+
+      // Handle image formatting.
+      $cache_contexts[] = 'url.site';
+      $image_uri = $file->getFileUri();
+      $cache_tags = Cache::mergeTags($cache_tags, $file->getCacheTags());
+
+      // Extract field item attributes for the theme function, and unset them
+      // from the $item so that the field template does not re-render them.
+      $item = $file->_referringItem;
+      if (!empty($item->_attributes)) {
         $item_attributes = $item->_attributes;
-        $item_attributes['class'][] = 'original-image';
-        unset($item->_attributes);
-
-        $images[$delta] = [
-          '#theme' => 'responsive_image_formatter',
-          '#item' => $item,
-          '#item_attributes' => $item_attributes,
-          '#responsive_image_style_id' => $responsive_image_style->id(),
-          '#prefix' => '<span class="image-zoom">',
-          '#suffix' => '</span>',
-          '#cache' => [
-            'tags' => $cache_tags,
-          ],
-        ];
-
       }
-      else {
-        // Handle image formatting.
-        $cache_contexts[] = 'url.site';
-        $image_uri = $file->getFileUri();
-        $cache_tags = Cache::mergeTags($cache_tags, $file->getCacheTags());
-
-        // Extract field item attributes for the theme function, and unset them
-        // from the $item so that the field template does not re-render them.
-        $item = $file->_referringItem;
-        if (!empty($item->_attributes)) {
-          $item_attributes = $item->_attributes;
-        }
-        $image_target_id = $item->getValue()['target_id'];
-        $image_uri = $this->fileUrlGenerator->generateAbsoluteString($image_uri);
-        // Use style image as origin if set.
-        if (isset($zoomed_image_style)) {
-          $image_uri = $zoomed_image_style->buildUrl($file->uri->value);
-        }
-        $image_uri = parse_url($image_uri);
-        $original_urls[$image_target_id] = $image_uri['path'];
-
-        // Add image style parameters.
-        if (isset($image_uri['query'])) {
-          $original_urls[$image_target_id] .= '?' . $image_uri['query'];
-        }
-
-        // Adding custom attributes to the img.
-        $item_attributes['class'][] = 'original-image';
-        $item_attributes['fid'] = $image_target_id;
-        unset($item->_attributes);
-
-        $images[$delta] = [
-          '#theme' => 'image_formatter',
-          '#item' => $item,
-          '#item_attributes' => $item_attributes,
-          '#image_style' => $image_style_setting,
-          '#prefix' => '<span class="image-zoom">',
-          '#suffix' => '</span>',
-          '#cache' => [
-            'tags' => $cache_tags,
-            'contexts' => $cache_contexts,
-          ],
-        ];
+      $image_target_id = $item->getValue()['target_id'];
+      $image_uri = $this->fileUrlGenerator->generateAbsoluteString($image_uri);
+      // Use style image as origin if set.
+      if (isset($zoomed_image_style)) {
+        $image_uri = $zoomed_image_style->buildUrl($file->uri->value);
       }
+      $image_uri = parse_url($image_uri);
+      $original_urls[$image_target_id] = $image_uri['path'];
+
+      // Add image style parameters.
+      if (isset($image_uri['query'])) {
+        $original_urls[$image_target_id] .= '?' . $image_uri['query'];
+      }
+
+      // Adding custom attributes to the img.
+      $item_attributes['class'][] = 'original-image';
+      $item_attributes['fid'] = $image_target_id;
+      unset($item->_attributes);
+
+      $images[$delta] = [
+        '#theme' => 'image_formatter',
+        '#item' => $item,
+        '#item_attributes' => $item_attributes,
+        '#image_style' => $image_style_setting,
+        '#prefix' => '<span class="image-zoom">',
+        '#suffix' => '</span>',
+        '#cache' => [
+          'tags' => $cache_tags,
+          'contexts' => $cache_contexts,
+        ],
+      ];
     }
 
     return [

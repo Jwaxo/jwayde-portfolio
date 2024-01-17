@@ -66,6 +66,13 @@ function waxo_gray_preprocess_node(&$variables) {
 }
 
 /**
+ * Implements template_preprocess_media().
+ */
+function waxo_gray_preprocess_media(&$variables) {
+  $variables['caption'] = $variables['media']->get('field_media_image')->first()->alt;
+}
+
+/**
  * Implements template_preprocess_block().
  */
 function waxo_gray_preprocess_block(&$variables) {
