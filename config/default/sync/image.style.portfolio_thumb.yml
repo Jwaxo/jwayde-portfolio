@@ -1,0 +1,15 @@
+uuid: a5188217-daa8-4f8c-bc1f-9e455e223c40
+langcode: en
+status: true
+dependencies: {  }
+name: portfolio_thumb
+label: 'Portfolio Thumbnail'
+effects:
+  7c9d71cd-7802-4897-b529-a62c80646fb0:
+    uuid: 7c9d71cd-7802-4897-b529-a62c80646fb0
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 136
+      height: 136
+      anchor: center-center

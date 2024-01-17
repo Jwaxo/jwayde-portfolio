@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.article.field_tags
     - field.field.node.article.field_thumbnail
     - field.field.node.article.field_time_period
+    - image.style.portfolio_thumb
     - node.type.article
   module:
     - media
@@ -31,7 +32,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: ''
+      image_style: portfolio_thumb
       image_loading:
         attribute: lazy
     third_party_settings: {  }

@@ -25,8 +25,8 @@ content:
     label: hidden
     settings:
       image_style: large
-      zoomed_image_style: wide
-      responsive_image_style: wide
+      zoomed_image_style: max_2600x2600
+      responsive_image_style: slides
       image_zoom_style: mouseover
       image_touchscreen_compatible: '1'
       image_magnify: '1'

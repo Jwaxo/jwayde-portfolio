@@ -1,0 +1,14 @@
+uuid: 08d74ec5-76ad-4eb7-9813-cf908362a10c
+langcode: en
+status: true
+dependencies: {  }
+id: slides
+label: Slides
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: '_original image_'
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+breakpoint_group: responsive_image
+fallback_image_style: '_original image_'
