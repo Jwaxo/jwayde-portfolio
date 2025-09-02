@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.article.field_client
     - field.field.node.article.field_color
     - field.field.node.article.field_images
-    - field.field.node.article.field_original_url
     - field.field.node.article.field_skills_used
     - field.field.node.article.field_source_status
     - field.field.node.article.field_source_url
@@ -17,7 +16,6 @@ dependencies:
     - field.field.node.article.field_time_period
     - node.type.article
   module:
-    - color_field
     - comment
     - link
     - media_library
@@ -61,12 +59,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_color:
-    type: color_field_widget_default
-    weight: 16
+    type: string_textfield
+    weight: 26
     region: content
     settings:
-      placeholder_color: ''
-      placeholder_opacity: ''
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_images:
     type: media_library_widget
@@ -74,14 +72,6 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
-  field_original_url:
-    type: link_default
-    weight: 26
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
     third_party_settings: {  }
   field_skills_used:
     type: entity_reference_autocomplete_tags

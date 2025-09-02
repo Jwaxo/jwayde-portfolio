@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.article.field_client
     - field.field.node.article.field_color
     - field.field.node.article.field_images
-    - field.field.node.article.field_original_url
     - field.field.node.article.field_skills_used
     - field.field.node.article.field_source_status
     - field.field.node.article.field_source_url
@@ -45,7 +44,6 @@ hidden:
   field_client: true
   field_color: true
   field_images: true
-  field_original_url: true
   field_skills_used: true
   field_source_status: true
   field_source_url: true

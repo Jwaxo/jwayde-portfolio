@@ -9,9 +9,8 @@ module:
   block: 0
   block_content: 0
   breakpoint: 0
-  ckeditor: 0
   ckeditor5: 0
-  color_field: 0
+  color: 0
   comment: 0
   config: 0
   contact: 0
@@ -28,6 +27,7 @@ module:
   history: 0
   image: 0
   layout_builder: 0
+  layout_builder_expose_all_field_blocks: 0
   layout_discovery: 0
   link: 0
   media: 0
@@ -50,8 +50,8 @@ module:
   text: 0
   token: 0
   toolbar: 0
-  tour: 0
   update: 0
+  upgrade_status: 0
   user: 0
   views_ui: 0
   waxo_blocks: 0

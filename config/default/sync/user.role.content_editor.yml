@@ -10,12 +10,12 @@ dependencies:
     - comment
     - contextual
     - file
+    - help
     - node
     - path
     - system
     - taxonomy
     - toolbar
-    - tour
 _core:
   default_config_hash: NtMgnXp0miNtJhag07NSjwdCm4zpJwhlDFs1HgyL4wI
 id: content_editor
@@ -27,8 +27,8 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access files overview'
+  - 'access help pages'
   - 'access toolbar'
-  - 'access tour'
   - 'administer url aliases'
   - 'create article content'
   - 'create page content'

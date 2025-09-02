@@ -14,7 +14,7 @@ _core:
 name: 'Portfolio Piece'
 type: article
 description: 'Use <em>Portfolio Pieces</em> to track individual bits of your portfolio that you wish to show off, or to have fuller pages about.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

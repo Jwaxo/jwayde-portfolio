@@ -1,17 +1,18 @@
-uuid: 34a0749d-6a06-4b64-9b7c-54c6bad7db2b
+uuid: 73713c16-d8e7-41ac-ab9e-e864a5bb58ec
 langcode: en
 status: true
 dependencies:
   module:
-    - color_field
     - node
 id: node.field_color
 field_name: field_color
 entity_type: node
-type: color_field_type
+type: string
 settings:
-  format: '#HEXHEX'
-module: color_field
+  max_length: 6
+  case_sensitive: false
+  is_ascii: false
+module: core
 locked: false
 cardinality: 1
 translatable: true

@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.article.field_client
     - field.field.node.article.field_color
     - field.field.node.article.field_images
-    - field.field.node.article.field_original_url
     - field.field.node.article.field_skills_used
     - field.field.node.article.field_source_status
     - field.field.node.article.field_source_url
@@ -71,7 +70,7 @@ third_party_settings:
                   rel: ''
                   target: ''
                 third_party_settings: {  }
-            weight: 7
+            weight: 6
             additional: {  }
           e537f607-28af-46b8-b96a-bf61670cd06c:
             uuid: e537f607-28af-46b8-b96a-bf61670cd06c
@@ -87,7 +86,7 @@ third_party_settings:
                 settings:
                   link_to_entity: false
                 third_party_settings: {  }
-            weight: 8
+            weight: 7
             additional: {  }
           470b7afb-3861-4059-8bc9-ad6691356ea4:
             uuid: 470b7afb-3861-4059-8bc9-ad6691356ea4
@@ -102,7 +101,7 @@ third_party_settings:
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: 9
+            weight: 8
             additional: {  }
           45d72794-8524-4539-8d68-92898654d7c3:
             uuid: 45d72794-8524-4539-8d68-92898654d7c3
@@ -156,7 +155,7 @@ third_party_settings:
                 settings:
                   link: false
                 third_party_settings: {  }
-            weight: 11
+            weight: 10
             additional: {  }
           4d87d00c-8da2-4d2b-ae8e-798b6046d61d:
             uuid: 4d87d00c-8da2-4d2b-ae8e-798b6046d61d
@@ -175,27 +174,23 @@ third_party_settings:
                 settings:
                   link: false
                 third_party_settings: {  }
-            weight: 10
+            weight: 9
             additional: {  }
-          3ec84ae7-2ec6-4e1e-b306-c78ac318ba12:
-            uuid: 3ec84ae7-2ec6-4e1e-b306-c78ac318ba12
+          4db52a55-55b5-447e-905c-234e63c7c78f:
+            uuid: 4db52a55-55b5-447e-905c-234e63c7c78f
             region: content
             configuration:
-              id: 'field_block:node:article:field_original_url'
+              id: 'field_block:node:article:field_color'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
               formatter:
-                type: link
+                type: string
                 label: above
                 settings:
-                  trim_length: 80
-                  url_only: false
-                  url_plain: false
-                  rel: ''
-                  target: ''
+                  link_to_entity: false
                 third_party_settings: {  }
-            weight: 6
+            weight: 11
             additional: {  }
         third_party_settings: {  }
 _core:
@@ -219,6 +214,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 1
+    region: content
+  field_color:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 8
     region: content
   field_images:
     type: slick_media
@@ -284,18 +287,6 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_original_url:
-    type: link
-    label: above
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 8
-    region: content
   field_skills_used:
     type: entity_reference_label
     label: above
@@ -341,6 +332,5 @@ content:
     region: content
 hidden:
   comment: true
-  field_color: true
   field_thumbnail: true
   links: true
