@@ -16,11 +16,11 @@
         {
           "type": "package",
           "package": {
-              "name": "jackmoore/zoom",
+              "name": "jwaxo/zoom",
               "version": "1.7.21",
               "type": "drupal-library-zoom",
               "source": {
-                  "url": "https://github.com/jackmoore/zoom.git",
+                  "url": "https://github.com/Jwaxo/zoom.git",
                   "type": "git",
                   "reference": "master"
               }
@@ -40,7 +40,7 @@
         "drupal/slick": "^3.0.4",
         "drupal/upgrade_status": "^4.3",
         "drush/drush": "^13",
-        "jackmoore/zoom": "^1.7"
+        "jwaxo/zoom": "^1.7"
     },
     "conflict": {
         "drupal/drupal": "*"
