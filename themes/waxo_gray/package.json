@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jwaxo/jwax-portfolio.git"
+    "url": "git+https://github.com/Jwaxo/jwayde-portfolio.git"
   },
   "keywords": [
     "drupal",
@@ -18,12 +18,12 @@
     "waxo",
     "gray"
   ],
-  "author": "Jeff Wax <jeff@jeffwax.com> (http://jeffwax.com)",
+  "author": "Jessica Wayde <jessica@jesswayde.com> (http://jesswayde.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Jwaxo/jwax-portfolio/issues"
+    "url": "https://github.com/Jwaxo/jwayde-portfolio/issues"
   },
-  "homepage": "jeffwax.com",
+  "homepage": "jesswayde.com",
   "browserslist": [
     "defaults"
   ],

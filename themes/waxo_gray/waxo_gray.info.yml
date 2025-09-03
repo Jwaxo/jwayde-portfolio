@@ -1,6 +1,6 @@
-name: Wax Gray
+name: Waxo Gray
 type: theme
-description: 'A Jeff Wax custom theme with minimal theming so I do not make something ugly.'
+description: 'A Jess Wayde custom theme with minimal theming so I do not make something ugly.'
 package: Core
 # version: VERSION
 core_version_requirement: ^10 || ^11
