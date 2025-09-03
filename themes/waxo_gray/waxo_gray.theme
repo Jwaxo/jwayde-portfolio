@@ -35,11 +35,13 @@ function waxo_gray_preprocess_page(&$variables) {
   // Sets the color value to be placed into the hero.
   if (isset($variables['node'])) {
     $node = $variables['node'];
-    if ($node->hasField('field_color') && $node->get('field_color')->first()) {
-      $variables['color_hex'] = '#' . $node->get('field_color')->first()->get('value')->getValue();
-    }
-    else {
-      $variables['color_hex'] = '#FFFFFF';
+    if ($node->hasField('field_color_hex') && $node->get('field_color_hex')->first()) {
+      if ($color = $node->get('field_color_hex')->first()->get('value')->getValue()) {
+        $variables['color_hex'] = '#' . $node->get('field_color_hex')->first()->get('value')->getValue();
+      }
+      else {
+        $variables['color_hex'] = '#FFFFFF';
+      }
     }
 
     if ($node->hasField('field_footer_image')) {

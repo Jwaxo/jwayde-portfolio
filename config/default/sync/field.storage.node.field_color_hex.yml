@@ -1,11 +1,11 @@
-uuid: ac62756b-93eb-4400-b5da-ca01382cdfee
+uuid: 39e480ad-4fc0-414a-b17a-c01d95dac45a
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: node.field_color
-field_name: field_color
+id: node.field_color_hex
+field_name: field_color_hex
 entity_type: node
 type: string
 settings:
