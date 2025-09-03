@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_client
+    - field.field.node.article.field_color
     - field.field.node.article.field_images
     - field.field.node.article.field_skills_used
     - field.field.node.article.field_source_status
@@ -41,6 +42,7 @@ hidden:
   body: true
   comment: true
   field_client: true
+  field_color: true
   field_images: true
   field_skills_used: true
   field_source_status: true

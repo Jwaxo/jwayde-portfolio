@@ -1,0 +1,19 @@
+uuid: 406a14f1-6cc1-42ee-8ebb-d2e55ad3744e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_color
+    - node.type.article
+id: node.article.field_color
+field_name: field_color
+entity_type: node
+bundle: article
+label: 'Color Hex'
+description: 'Enter the hex code of the background color to put behind the hero (and in a few other places). If nothing is entered, the default of #FFFFFF will be used.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_client
+    - field.field.node.article.field_color
     - field.field.node.article.field_images
     - field.field.node.article.field_skills_used
     - field.field.node.article.field_source_status
@@ -52,6 +53,14 @@ content:
   field_client:
     type: string_textfield
     weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_color:
+    type: string_textfield
+    weight: 26
     region: content
     settings:
       size: 60
