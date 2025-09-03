@@ -1,0 +1,27 @@
+uuid: 163222f8-d7ff-4874-b2ba-5c940028c172
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_text_theme
+field_name: field_text_theme
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: dark
+      label: Dark
+    -
+      value: light
+      label: Light
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

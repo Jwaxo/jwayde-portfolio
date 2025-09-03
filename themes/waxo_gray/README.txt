@@ -1,8 +1,8 @@
-ABOUT JEFF WAX
+ABOUT JESS WAYDE
 --------------
 
 Why would you be looking here for info on me? The actual site should have some,
-at jeffwax.com. If you're not there, hey, thanks for checking out my repo.
+at jesswayde.com. If you're not there, hey, thanks for checking out my repo.
 
 HOW TO THEME
 ------------
@@ -14,5 +14,5 @@ rest should be the same as your typical Drupal theming.
 ABOUT DRUPAL THEMING
 --------------------
 
-See https://www.drupal.org/docs/8/theming for more information on Drupal
+See https://www.drupal.org/docs/11/theming for more information on Drupal
 theming.

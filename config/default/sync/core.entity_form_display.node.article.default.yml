@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.article.field_source_status
     - field.field.node.article.field_source_url
     - field.field.node.article.field_tags
+    - field.field.node.article.field_text_theme
     - field.field.node.article.field_thumbnail
     - field.field.node.article.field_time_period
     - node.type.article
@@ -106,6 +107,12 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_text_theme:
+    type: options_select
+    weight: 27
+    region: content
+    settings: {  }
     third_party_settings: {  }
   field_thumbnail:
     type: media_library_widget

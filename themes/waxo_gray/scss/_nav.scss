@@ -37,6 +37,14 @@ header ul.menu li {
   }
 }
 
+header.theme--light ul.menu li {
+  a,
+  a:visited,
+  a:active {
+    color: palette($colors, white, true);
+  }
+}
+
 footer {
   ul.menu {
     margin: 20px 0;

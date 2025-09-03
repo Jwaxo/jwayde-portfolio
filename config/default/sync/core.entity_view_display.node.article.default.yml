@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.article.field_source_status
     - field.field.node.article.field_source_url
     - field.field.node.article.field_tags
+    - field.field.node.article.field_text_theme
     - field.field.node.article.field_thumbnail
     - field.field.node.article.field_time_period
     - image.style.large
@@ -305,6 +306,13 @@ content:
       link: true
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_text_theme:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_time_period:
     type: string

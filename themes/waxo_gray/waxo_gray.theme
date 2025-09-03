@@ -37,10 +37,15 @@ function waxo_gray_preprocess_page(&$variables) {
     $node = $variables['node'];
     if ($node->hasField('field_color_hex') && $node->get('field_color_hex')->first()) {
       if ($color = $node->get('field_color_hex')->first()->get('value')->getValue()) {
-        $variables['color_hex'] = '#' . $node->get('field_color_hex')->first()->get('value')->getValue();
+        $variables['color_hex'] = '#' . $color;
       }
       else {
         $variables['color_hex'] = '#FFFFFF';
+      }
+    }
+    if ($node->hasField('field_text_theme') && $node->get('field_text_theme')->first()) {
+      if ($theme = $node->get('field_text_theme')->first()->getValue()) {
+        $variables['text_theme'] = $theme['value'];
       }
     }
 

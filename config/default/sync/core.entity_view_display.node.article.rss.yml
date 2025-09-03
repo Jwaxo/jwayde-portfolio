@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.article.field_source_status
     - field.field.node.article.field_source_url
     - field.field.node.article.field_tags
+    - field.field.node.article.field_text_theme
     - field.field.node.article.field_thumbnail
     - field.field.node.article.field_time_period
     - node.type.article
@@ -38,5 +39,6 @@ hidden:
   field_source_status: true
   field_source_url: true
   field_tags: true
+  field_text_theme: true
   field_thumbnail: true
   field_time_period: true

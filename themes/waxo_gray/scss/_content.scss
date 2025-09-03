@@ -55,6 +55,9 @@
 
 .field--title {
   text-align: center;
+  .theme--light & {
+    color: palette($colors, white, true);
+  }
 }
 
 .field--body {
