@@ -3,7 +3,7 @@ type: theme
 description: 'A Jeff Wax custom theme with minimal theming so I do not make something ugly.'
 package: Core
 # version: VERSION
-core_version_requirement: 10.x
+core_version_requirement: ^10 || ^11
 base theme: false
 
 ckeditor_stylesheets:
