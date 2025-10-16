@@ -1,0 +1,19 @@
+uuid: 01a449f8-257d-4a98-8f16-adef9cf8650f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_color_hex
+    - node.type.writing_piece
+id: node.writing_piece.field_color_hex
+field_name: field_color_hex
+entity_type: node
+bundle: writing_piece
+label: 'Color Hex'
+description: 'Enter the hex value of a color to have as the background in the "hero" section. Entering none will result in this rendering white.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

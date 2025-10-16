@@ -1,0 +1,41 @@
+uuid: 89740f14-7b49-48d1-bc73-bc6eea0ab499
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.writing_piece.body
+    - field.field.node.writing_piece.field_client
+    - field.field.node.writing_piece.field_color_hex
+    - field.field.node.writing_piece.field_images
+    - field.field.node.writing_piece.field_skills_used
+    - field.field.node.writing_piece.field_source_status
+    - field.field.node.writing_piece.field_source_url
+    - field.field.node.writing_piece.field_tags
+    - field.field.node.writing_piece.field_text_theme
+    - field.field.node.writing_piece.field_time_period
+    - node.type.writing_piece
+  module:
+    - layout_builder
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: node.writing_piece.teaser
+targetEntityType: node
+bundle: writing_piece
+mode: teaser
+content: {  }
+hidden:
+  body: true
+  field_client: true
+  field_color_hex: true
+  field_images: true
+  field_skills_used: true
+  field_source_status: true
+  field_source_url: true
+  field_tags: true
+  field_text_theme: true
+  field_time_period: true
+  links: true

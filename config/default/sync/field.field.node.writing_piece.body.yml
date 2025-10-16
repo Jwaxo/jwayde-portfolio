@@ -1,0 +1,24 @@
+uuid: bf69c5e4-1f2a-4acd-8b27-21b6fff0a9a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.writing_piece
+  module:
+    - text
+id: node.writing_piece.body
+field_name: body
+entity_type: node
+bundle: writing_piece
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

@@ -1,0 +1,19 @@
+uuid: 175b9211-a9d4-473c-8bd9-dd95f1f7a1b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_time_period
+    - node.type.writing_piece
+id: node.writing_piece.field_time_period
+field_name: field_time_period
+entity_type: node
+bundle: writing_piece
+label: 'Time Period'
+description: 'Enter the period of time that this project was worked on.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

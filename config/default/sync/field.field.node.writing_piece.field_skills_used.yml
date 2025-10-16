@@ -1,0 +1,29 @@
+uuid: 504a8dd6-c2b4-4811-bfde-d8b458261fd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_skills_used
+    - node.type.writing_piece
+    - taxonomy.vocabulary.skills
+id: node.writing_piece.field_skills_used
+field_name: field_skills_used
+entity_type: node
+bundle: writing_piece
+label: 'Skills Used'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      skills: skills
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 92d2d516-ff54-4d81-9f62-27e9a442dd1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_client
+    - node.type.writing_piece
+id: node.writing_piece.field_client
+field_name: field_client
+entity_type: node
+bundle: writing_piece
+label: Client
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: Personal
+default_value_callback: ''
+settings: {  }
+field_type: string

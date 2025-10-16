@@ -1,0 +1,23 @@
+uuid: 7959e31c-81f3-4f91-9c9b-8c3c12b22acd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_theme
+    - node.type.writing_piece
+  module:
+    - options
+id: node.writing_piece.field_text_theme
+field_name: field_text_theme
+entity_type: node
+bundle: writing_piece
+label: 'Text Theme'
+description: 'Pick which color to make the text that appears in the hero. If your Color Hex is particularly dark, try using the Light theme.'
+required: true
+translatable: false
+default_value:
+  -
+    value: dark
+default_value_callback: ''
+settings: {  }
+field_type: list_string

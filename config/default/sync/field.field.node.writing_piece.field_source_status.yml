@@ -1,0 +1,23 @@
+uuid: 84f26d6c-c4d2-4a1e-af04-a4b9a1c731a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_source_status
+    - node.type.writing_piece
+  module:
+    - options
+id: node.writing_piece.field_source_status
+field_name: field_source_status
+entity_type: node
+bundle: writing_piece
+label: 'Source Status'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: open
+default_value_callback: ''
+settings: {  }
+field_type: list_string
