@@ -47,9 +47,9 @@
 
   <header role="banner" class="{% if header_class %}{{ header_class }}{% endif %}{% if text_theme %} theme--{{ text_theme }}{% endif %}" style="{% if color_hex %}background-color: {{ color_hex }}{% endif %}">
     <div class="container">
+      {{ page.primary_menu }}
       {{ page.header }}
 
-      {{ page.primary_menu }}
       {{ page.secondary_menu }}
     </div>
   </header>

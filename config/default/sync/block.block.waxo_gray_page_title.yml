@@ -9,7 +9,7 @@ _core:
 id: waxo_gray_page_title
 theme: waxo_gray
 region: header
-weight: -5
+weight: -8
 provider: null
 plugin: page_title_block
 settings:

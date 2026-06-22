@@ -113,7 +113,7 @@ function waxo_gray_preprocess_field(&$variables) {
         // and other fields to pass along.
         $image = [];
         $image_media = $entity->get('field_image');
-        if ($image_media) {
+        if ($image_media && $image_media->entity) {
           $image = _waxo_gray_get_image_from_media($image_media);
           if (!empty($image)) {
             $variables['image'] = $image;

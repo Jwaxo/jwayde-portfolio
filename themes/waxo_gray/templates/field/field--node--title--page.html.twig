@@ -23,12 +23,12 @@
 #}
 <div class="hero">
   <div class="hero-inner">
-    <h1{{ attributes.addClass('hero-title') }}>
+    {# <h1{{ attributes.addClass('hero-title') }}>
       {%- for item in items -%}
         {{ item.content }}
       {%- endfor -%}
-    </h1>
-    {% if subtitle %}<p class="hero-subtitle">{{ subtitle }}</p>{% endif %}
+    </h1> #}
+    {% if subtitle %}<h2 class="hero-subtitle">{{ subtitle }}</h2>{% endif %}
   </div>
   {% if image %}<img class="hero-image" src="{{ image.url }}" alt="{{ image.alt }}">{% endif %}
 </div>

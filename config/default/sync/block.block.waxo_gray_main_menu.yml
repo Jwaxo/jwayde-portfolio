@@ -5,7 +5,6 @@ dependencies:
   config:
     - system.menu.main
   module:
-    - node
     - system
   theme:
     - waxo_gray
@@ -14,7 +13,7 @@ _core:
 id: waxo_gray_main_menu
 theme: waxo_gray
 region: primary_menu
-weight: 0
+weight: -7
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -25,11 +24,4 @@ settings:
   level: 1
   depth: 2
   expand_all_items: true
-visibility:
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
-    bundles:
-      article: article
+visibility: {  }
