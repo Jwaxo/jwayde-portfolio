@@ -1,6 +1,10 @@
 /**
  * Basic element styling.
  */
+@use 'vars';
+@use 'functions';
+@use 'sass:map';
+
 *,
 *:after,
 *:before {
@@ -16,12 +20,12 @@ body {
  * Make sure all of this only happens after admin toolbars and such.
  */
 .layout-container {
-  font-family: $body-font;
+  font-family: vars.$body-font;
   font-weight: 400;
   overflow-x: hidden;
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: $headline-font;
+    font-family: vars.$headline-font;
     font-weight: 500;
 
     strong {
@@ -30,11 +34,11 @@ body {
   }
 
   h1 {
-    font-size: map-get($font-size, billboard);
+    font-size: map.get(vars.$font-size, billboard);
   }
 
   h2 {
-    font-size: map-get($font-size, giant);
+    font-size: map.get(vars.$font-size, giant);
   }
 
   strong {
@@ -44,10 +48,10 @@ body {
   a,
   a:visited,
   a:active {
-    color: palette($colors, green, medium);
+    color: functions.palette(vars.$colors, green, medium);
 
     &:hover {
-      color: palette($colors, green, light);
+      color: functions.palette(vars.$colors, green, light);
     }
   }
 

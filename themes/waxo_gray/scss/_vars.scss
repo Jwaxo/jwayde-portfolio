@@ -1,6 +1,8 @@
 /**
  * Theme-wide settings.
  */
+@use 'fonts';
+@use 'functions';
 
 $widths: (
   desktop: 1080px,
@@ -23,8 +25,8 @@ $font-size: (
   enormous: 84px,
 );
 
-$body-font: $nobile-normal;
-$headline-font: $lato-normal;
+$body-font: fonts.$nobile-normal;
+$headline-font: fonts.$lato-normal;
 
 $colors: (
   white: (
@@ -52,13 +54,13 @@ $colors: (
 
 $layout-colors: (
   header: (
-    bg: palette($colors, gray, medium)
+    bg: functions.palette($colors, gray, medium)
   ),
   main: (
-    bg: palette($colors, gray, light),
+    bg: functions.palette($colors, gray, light),
   ),
   footer: (
-    bg: palette($colors, gray, dark),
+    bg: functions.palette($colors, gray, dark),
   ),
 );
 
@@ -68,15 +70,15 @@ $tabs: (
     margin: 0 5px,
   ),
   background: (
-    default: palette($colors, gray, light),
-    hover: palette($colors, gray, medium),
+    default: functions.palette($colors, gray, light),
+    hover: functions.palette($colors, gray, medium),
   ),
   border: (
-    color: palette($colors, gray, dark),
+    color: functions.palette($colors, gray, dark),
     width: 1px,
   ),
   link: (
-    active: palette($colors, gray, dark),
-    inactive: palette($colors, blue, medium),
+    active: functions.palette($colors, gray, dark),
+    inactive: functions.palette($colors, blue, medium),
   ),
 );

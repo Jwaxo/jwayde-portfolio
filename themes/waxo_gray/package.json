@@ -28,13 +28,13 @@
     "defaults"
   ],
   "dependencies": {
-    "autoprefixer": "^10.2.5",
-    "gulp": "^4.0.0",
-    "gulp-load-plugins": "^1.6.0",
-    "gulp-postcss": "^9.0.0",
-    "gulp-sass": "^4.0.1",
-    "jquery": "^3.4.1",
-    "motion-ui": "^2.0.3",
-    "postcss": "^8.2.14"
+    "autoprefixer": "^10.5.0",
+    "gulp": "^5.0.1",
+    "gulp-load-plugins": "^2.0.8",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^6.0.1",
+    "jquery": "^4.0.0",
+    "motion-ui": "^2.0.8",
+    "postcss": "^8.5.15"
   }
 }

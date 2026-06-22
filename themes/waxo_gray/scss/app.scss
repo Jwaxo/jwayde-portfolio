@@ -1,15 +1,12 @@
 @charset 'utf-8';
+// @use 'fonts';
 
-@import 'fonts';
-@import 'functions';
+@forward 'functions';
 
-@import 'vars';
-@import 'mixins';
+@forward 'elements';
+@forward 'layout';
+@forward 'nav';
 
-@import 'elements';
-@import 'layout';
-@import 'nav';
-
-@import 'fields';
-@import 'content';
-@import 'media';
+@forward 'fields';
+@forward 'content';
+@forward 'media';

@@ -1,6 +1,10 @@
 /**
  * Drupal field and field component styling.
  */
+@use 'vars';
+@use 'functions';
+@use 'mixins';
+@use 'sass:map';
 
 .hero {
   display: flex;
@@ -8,19 +12,19 @@
   justify-content: center;
   align-items: center;
 
-  @include size-desktop() {
-    min-height: map-get($heights, hero);
+  @include mixins.size-desktop() {
+    min-height: map.get(vars.$heights, hero);
   }
 }
 
 .hero-inner {
-  color: palette($colors, gray, light);
+  color: functions.palette(vars.$colors, gray, light);
   text-align: center;
   z-index: 1;
 }
 
 .hero-title {
-  font-size: map-get($font-size, enormous);
+  font-size: map.get(vars.$font-size, enormous);
   margin: 1rem 0;
 }
 
@@ -37,12 +41,12 @@
 .footer-image {
   background-attachment: fixed;
   position: relative;
-  height: map-get($heights, footer-image);
+  height: map.get(vars.$heights, footer-image);
   &:before {
-    background: linear-gradient(palette($layout-colors, main, bg), rgba(0,0,0,0));
+    background: linear-gradient(functions.palette(vars.$layout-colors, main, bg), rgba(0,0,0,0));
     content: '';
     display: block;
-    height: map-get($heights, footer-image);
+    height: map.get(vars.$heights, footer-image);
     width: 100%;
     z-index: 10;
   }

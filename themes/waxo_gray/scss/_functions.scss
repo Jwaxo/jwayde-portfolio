@@ -1,6 +1,7 @@
 /**
  * SASS functions for utility.
  */
+@use 'sass:map';
 
 /**
  * Replicate map_get in a simpler, two-branch method.
@@ -8,11 +9,11 @@
  */
 @function palette($map, $first, $second) {
 
-  @if map-has-key($map, $first){
-    $first_branch: map-get($map, $first);
+  @if map.has-key($map, $first){
+    $first_branch: map.get($map, $first);
 
-    @if map-has-key($first_branch, $second){
-      @return map-get($first_branch, $second);
+    @if map.has-key($first_branch, $second){
+      @return map.get($first_branch, $second);
     }
 
     @warn "Unknown index `#{$second}` in first branch";

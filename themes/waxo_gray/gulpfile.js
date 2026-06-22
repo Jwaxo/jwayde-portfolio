@@ -1,4 +1,5 @@
 const { watch, parallel, series, dest, src } = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
 const $ = require('gulp-load-plugins')();
 const autoprefixer = require('autoprefixer');
 
@@ -10,11 +11,11 @@ const sassPaths = [
 function taskSass(cb) {
   console.log('Rendering SCSS...');
   const returned = src('scss/app.scss')
-    .pipe($.sass({
+    .pipe(sass({
       includePaths: sassPaths,
       outputStyle: 'compressed' // if css compressed **file size**
     })
-      .on('error', $.sass.logError))
+      .on('error', sass.logError))
     .pipe($.postcss([
       autoprefixer(),
     ]))

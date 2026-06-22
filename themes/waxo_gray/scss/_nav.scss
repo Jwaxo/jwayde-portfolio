@@ -1,6 +1,10 @@
 /**
  * Navigation styles.
  */
+@use 'vars';
+@use 'functions';
+@use 'mixins';
+
 nav.nav--menu {
   overflow: hidden;
 }
@@ -29,9 +33,9 @@ header ul.menu li {
   a,
   a:visited,
   a:active {
-    color: palette($colors, gray, dark);
+    color: functions.palette(vars.$colors, gray, dark);
     &:hover {
-      color: palette($colors, green, medium);
+      color: functions.palette(vars.$colors, green, medium);
       text-decoration: underline;
     }
   }
@@ -41,7 +45,7 @@ header.theme--light ul.menu li {
   a,
   a:visited,
   a:active {
-    color: palette($colors, white, true);
+    color: functions.palette(vars.$colors, white, true);
   }
 }
 
@@ -61,10 +65,10 @@ ol.menu.menu--breadcrumbs {
 }
 
 .menu.menu--local {
-  @include tabs;
+  @include mixins.tabs;
 }
 
 ul.tabs,
 li.tabs {
-  @include tabs;
+  @include mixins.tabs;
 }
