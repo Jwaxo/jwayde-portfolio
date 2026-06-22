@@ -38,6 +38,7 @@ body {
   }
 
   h2 {
+    color: map.get(vars.$layout-colors, main, highlight);
     font-size: map.get(vars.$font-size, giant);
   }
 

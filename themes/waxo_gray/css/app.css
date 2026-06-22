@@ -45,6 +45,7 @@ body {
   font-size: 60px;
 }
 .layout-container h2 {
+  color: #1fab57;
   font-size: 40px;
 }
 .layout-container strong {
@@ -87,7 +88,7 @@ header {
   background-color: #b6b6b6;
 }
 header.header--page {
-  background-color: transparent;
+  background: linear-gradient(#1fab57, #6699ff);
 }
 
 main {
@@ -180,7 +181,7 @@ header ul.menu li a:active {
 header ul.menu li a:hover,
 header ul.menu li a:visited:hover,
 header ul.menu li a:active:hover {
-  color: #669966;
+  color: #222;
   text-decoration: underline;
 }
 

@@ -45,6 +45,7 @@ $colors: (
   ),
   green: (
     light: #99cc99,
+    highlight: #1fab57,
     medium: #669966,
   ),
   black: (
@@ -54,10 +55,13 @@ $colors: (
 
 $layout-colors: (
   header: (
-    bg: functions.palette($colors, gray, medium)
+    bg: functions.palette($colors, gray, medium),
+    headline: functions.palette($colors, green, highlight),
   ),
   main: (
     bg: functions.palette($colors, gray, light),
+    highlight: functions.palette($colors, green, highlight),
+    lowlight: functions.palette($colors, blue, light),
   ),
   footer: (
     bg: functions.palette($colors, gray, dark),
