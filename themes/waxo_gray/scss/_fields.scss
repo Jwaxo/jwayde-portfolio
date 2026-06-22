@@ -28,6 +28,14 @@
   margin: 1rem 0;
 }
 
+h2.hero-subtitle {
+  color: functions.palette(vars.$colors, black, true);
+  em {
+    color: functions.palette(vars.$layout-colors, main, highlight);
+    font-style: normal;
+  }
+}
+
 .hero-image {
   background-attachment: fixed;
   position: fixed;

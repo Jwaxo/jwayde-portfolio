@@ -10,7 +10,7 @@ header {
   background-color: functions.palette(vars.$layout-colors, header, bg);
 
   &.header--page {
-    background: linear-gradient(functions.palette(vars.$layout-colors, main, highlight), functions.palette(vars.$layout-colors, main, lowlight));
+    background: url("../images/header_bg.png") no-repeat scroll center center / cover transparent;
   }
 }
 

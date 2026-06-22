@@ -4,9 +4,26 @@
 @use 'vars';
 @use 'functions';
 @use 'mixins';
+@use 'sass:map';
 
 nav.nav--menu {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   overflow: hidden;
+
+  a.home-link {
+    display: block;
+    color: functions.palette(vars.$colors, black, true);
+    font-size: map.get(vars.$font-size, giant);
+    font-style: italic;
+    font-weight: heavy;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 ul.menu,
