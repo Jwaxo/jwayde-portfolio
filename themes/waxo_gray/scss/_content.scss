@@ -13,12 +13,12 @@
 }
 
 .views-rowcontainer {
-  display: flex;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
 }
 
 .views-row {
-  flex: 1 1 100%;
+  // flex: 1 1 100%;
   margin-bottom: 30px;
 
   @include mixins.size-mobile() {

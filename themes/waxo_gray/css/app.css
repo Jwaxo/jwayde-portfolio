@@ -350,13 +350,7 @@ h2.hero-subtitle em {
   text-align: center;
 }
 
-.views-rowcontainer {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .views-row {
-  flex: 1 1 100%;
   margin-bottom: 30px;
 }
 @media (min-width: 760px) {
