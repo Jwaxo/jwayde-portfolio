@@ -1,0 +1,10 @@
+{#
+/**
+ * @file
+ * Theme override for the thumbnail field in a teaser display.
+#}
+{% extends 'field--inline.html.twig' %}
+
+{% block field_prefix %}
+  <span class="title">{{ element['#object'].title.value }}</span>
+{% endblock %}

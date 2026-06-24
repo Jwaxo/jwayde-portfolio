@@ -6,7 +6,7 @@
 @use 'mixins';
 @use 'sass:map';
 
-.field--field_images {
+.field--field-images {
   margin: 30px 0;
 }
 
@@ -33,7 +33,7 @@ img.zoomImg {
   z-index: 5;
 }
 
-.field--field_caption {
+.field--field-caption {
   background-color: functions.palette(vars.$colors, white, true);
   font-size: map.get(vars.$font-size, small);
   line-height: 1.3;

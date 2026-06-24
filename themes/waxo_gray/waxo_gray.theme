@@ -70,6 +70,7 @@ function waxo_gray_preprocess_node(&$variables) {
   $node = $variables['elements']['#node'];
   $bundle = $node->getType();
 
+  $variables['attributes']['class'][] = 'node';
   $variables['attributes']['class'][] = 'node--' . $bundle;
   $variables['attributes']['class'][] = 'node--' . $variables['elements']['#view_mode'];
   $variables['attributes']['class'][] = 'node--' . $bundle . '--' . $variables['elements']['#view_mode'];

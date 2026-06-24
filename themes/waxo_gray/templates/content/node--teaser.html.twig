@@ -66,14 +66,10 @@
  * @see template_preprocess_node()
  */
 #}
-<article{{ attributes.addClass('container-breakout') }}>
+<article{{ attributes }}>
 
-  {{ title_prefix }}
-    <a{{ title_attributes.addClass('node-title') }} href="{{ url }}" rel="bookmark">{{ label }}</a>
-  {{ title_suffix }}
-
-  <div{{ content_attributes.addClass('node-inner') }}>
+  <a{{ content_attributes.addClass('node-inner') }} href="{{ url }}" title="Learn more about {{ node.title.value }}">
     {{ content }}
-  </div>
+  </a>
 
 </article>
