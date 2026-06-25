@@ -52,7 +52,7 @@ function waxo_gray_preprocess_page(&$variables) {
     if ($node->hasField('field_footer_image')) {
       $image = [];
       $image_media = $node->get('field_footer_image');
-      if ($image_media) {
+      if ($image_media && $image_media->entity) {
         $image = _waxo_gray_get_image_from_media($image_media);
         if (!empty($image)) {
           $variables['footer_image'] = $image;
