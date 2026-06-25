@@ -56,6 +56,7 @@ $colors: (
 $layout-colors: (
   header: (
     bg: functions.palette($colors, gray, medium),
+    text: functions.palette($colors, black, true),
     headline: functions.palette($colors, green, highlight),
   ),
   main: (

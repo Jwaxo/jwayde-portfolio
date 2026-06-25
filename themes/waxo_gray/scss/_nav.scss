@@ -14,14 +14,42 @@ nav.nav--menu {
 
   a.home-link {
     display: block;
-    color: functions.palette(vars.$colors, black, true);
+    color: map.get(vars.$layout-colors, header, headline);
+    flex-grow: 2;
     font-size: map.get(vars.$font-size, giant);
     font-style: italic;
-    font-weight: heavy;
+    font-weight: 700;
+    position: relative;
     text-transform: uppercase;
     text-decoration: none;
+    z-index: 1;
     &:hover {
-      text-decoration: underline;
+      color: map.get(vars.$layout-colors, header, text);
+      &:before,
+      &:after {
+        color: map.get(vars.$layout-colors, header, headline);
+      }
+    }
+    &,
+    &:before,
+    &:after {
+      transition: color .1s linear;
+    }
+    &:before,
+    &:after {
+      color: map.get(vars.$layout-colors, header, text);
+      content: "Jessica Wayde";
+      position: absolute;
+    }
+    &:before {
+      left: -2px;
+      top: -2px;
+      z-index: 2;
+    }
+    &:after {
+      left: 2px;
+      top: 2px;
+      z-index: -1;
     }
   }
 }

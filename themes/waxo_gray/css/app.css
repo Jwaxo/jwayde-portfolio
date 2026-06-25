@@ -156,15 +156,39 @@ nav.nav--menu {
 }
 nav.nav--menu a.home-link {
   display: block;
-  color: #000;
+  color: #1fab57;
+  flex-grow: 2;
   font-size: 40px;
   font-style: italic;
-  font-weight: heavy;
+  font-weight: 700;
+  position: relative;
   text-transform: uppercase;
   text-decoration: none;
+  z-index: 1;
 }
 nav.nav--menu a.home-link:hover {
-  text-decoration: underline;
+  color: #000;
+}
+nav.nav--menu a.home-link:hover:before, nav.nav--menu a.home-link:hover:after {
+  color: #1fab57;
+}
+nav.nav--menu a.home-link, nav.nav--menu a.home-link:before, nav.nav--menu a.home-link:after {
+  transition: color 0.1s linear;
+}
+nav.nav--menu a.home-link:before, nav.nav--menu a.home-link:after {
+  color: #000;
+  content: "Jessica Wayde";
+  position: absolute;
+}
+nav.nav--menu a.home-link:before {
+  left: -2px;
+  top: -2px;
+  z-index: 2;
+}
+nav.nav--menu a.home-link:after {
+  left: 2px;
+  top: 2px;
+  z-index: -1;
 }
 
 ul.menu,
