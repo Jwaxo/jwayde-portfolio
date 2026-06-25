@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: portfolio_thumb
-label: 'Portfolio Thumbnail'
+label: 'Portfolio Thumbnail (1040x580)'
 effects:
   7c9d71cd-7802-4897-b529-a62c80646fb0:
     uuid: 7c9d71cd-7802-4897-b529-a62c80646fb0
