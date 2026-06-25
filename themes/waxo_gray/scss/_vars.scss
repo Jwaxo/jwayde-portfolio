@@ -5,6 +5,7 @@
 @use 'functions';
 
 $widths: (
+  widescreen: 1280px,
   desktop: 1080px,
   mobile: 760px,
 );
@@ -63,6 +64,8 @@ $layout-colors: (
     bg: functions.palette($colors, gray, light),
     highlight: functions.palette($colors, green, highlight),
     lowlight: functions.palette($colors, blue, light),
+    text: functions.palette($colors, black, true),
+    shadow: functions.palette($colors, gray, medium-dark),
   ),
   footer: (
     bg: functions.palette($colors, gray, dark),

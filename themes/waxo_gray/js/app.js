@@ -5,3 +5,14 @@
  */
 
 jQuery('.field--field-images').slick();
+
+// Make project rows visible once they are past 1/3 the way up the screen.
+const project_rows = jQuery('.views-view--project-list .views-row');
+
+jQuery(window).on('resize scroll', () => {
+  project_rows.each((index, row) => {
+    if (jQuery(row).offset().top < (jQuery(window).scrollTop() + (jQuery(window).height() * 0.66))) {
+      jQuery(row).addClass('loaded');
+    }
+  })
+})

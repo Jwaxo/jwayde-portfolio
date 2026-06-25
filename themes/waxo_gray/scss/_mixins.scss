@@ -56,3 +56,9 @@
     @content;
   }
 }
+
+@mixin size-widescreen {
+  @media (min-width: #{map.get(vars.$widths, widescreen)}) {
+    @content;
+  }
+}

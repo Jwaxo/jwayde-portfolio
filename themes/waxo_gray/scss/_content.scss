@@ -15,16 +15,31 @@
 .views-view--project-list {
   background: url('../images/teasers_bg.png') repeat scroll transparent;
 
+  .views-row {
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+
+    &.loaded {
+      opacity: 1;
+    }
+  }
+
   .node-inner {
     align-items: center;
     display: flex;
+    flex-direction: column;
     flex-wrap: no-wrap;
     justify-content: flex-start;
-    text-align: left;
+    @include mixins.size-widescreen() {
+      flex-direction: row;
+      text-align: left;
+    }
   }
   .views-row:nth-child(even) .node-inner {
-    flex-direction: row-reverse;
-    text-align: right;
+    @include mixins.size-widescreen() {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
   }
 
   a.node-inner {
@@ -37,6 +52,10 @@
       }
       .title {
         opacity: 1;
+      }
+      .field--field-tagline {
+        color: map.get(vars.$layout-colors, main, text);
+        text-decoration: underline;
       }
     }
   }
@@ -65,16 +84,25 @@
   .title,
   .field--field-tagline {
     font-family: vars.$headline-font;
-    font-size: 32px;
+    font-size: 42px;
     font-weight: bold;
+  }
+
+  .title {
+    text-shadow: 2px 2px 5px map.get(vars.$layout-colors, main, shadow);
   }
 
   .field--field-tagline {
     padding: 30px;
   }
 
-  .views-row:nth-child(3n+3) .field--field-tagline {
-    color: black;
+  .views-row:nth-child(3n+3) {
+    .field--field-tagline {
+      color: map.get(vars.$layout-colors, main, text);
+    }
+    a.node-inner:hover .field--field-tagline {
+      color: map.get(vars.$layout-colors, main, highlight);
+    }
   }
 }
 

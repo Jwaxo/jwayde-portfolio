@@ -377,16 +377,31 @@ h2.hero-subtitle em {
 .views-view--project-list {
   background: url("../images/teasers_bg.png") repeat scroll transparent;
 }
+.views-view--project-list .views-row {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.views-view--project-list .views-row.loaded {
+  opacity: 1;
+}
 .views-view--project-list .node-inner {
   align-items: center;
   display: flex;
+  flex-direction: column;
   flex-wrap: no-wrap;
   justify-content: flex-start;
-  text-align: left;
 }
-.views-view--project-list .views-row:nth-child(even) .node-inner {
-  flex-direction: row-reverse;
-  text-align: right;
+@media (min-width: 1280px) {
+  .views-view--project-list .node-inner {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+@media (min-width: 1280px) {
+  .views-view--project-list .views-row:nth-child(even) .node-inner {
+    flex-direction: row-reverse;
+    text-align: right;
+  }
 }
 .views-view--project-list a.node-inner {
   position: relative;
@@ -398,6 +413,10 @@ h2.hero-subtitle em {
 }
 .views-view--project-list a.node-inner:hover .title {
   opacity: 1;
+}
+.views-view--project-list a.node-inner:hover .field--field-tagline {
+  color: #000;
+  text-decoration: underline;
 }
 .views-view--project-list .field--field-thumbnail {
   opacity: 1;
@@ -422,14 +441,20 @@ h2.hero-subtitle em {
 .views-view--project-list .title,
 .views-view--project-list .field--field-tagline {
   font-family: "Lato", sans-serif;
-  font-size: 32px;
+  font-size: 42px;
   font-weight: bold;
+}
+.views-view--project-list .title {
+  text-shadow: 2px 2px 5px #666;
 }
 .views-view--project-list .field--field-tagline {
   padding: 30px;
 }
 .views-view--project-list .views-row:nth-child(3n+3) .field--field-tagline {
-  color: black;
+  color: #000;
+}
+.views-view--project-list .views-row:nth-child(3n+3) a.node-inner:hover .field--field-tagline {
+  color: #1fab57;
 }
 
 .views-row {
