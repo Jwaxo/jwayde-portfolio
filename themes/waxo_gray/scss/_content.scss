@@ -155,6 +155,9 @@
 
 .field--body {
   line-height: 1.5;
+  > p:first-child {
+    margin-top: 0;
+  }
 }
 
 .field--taxonomy {

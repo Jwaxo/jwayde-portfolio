@@ -85,10 +85,7 @@ body {
  * tabs.
  */
 header {
-  background-color: #b6b6b6;
-}
-header.header--page {
-  background: url("../images/header_bg.png") no-repeat scroll center center/cover transparent;
+  background: url("../images/header_bg.png") no-repeat scroll center center/cover #b6b6b6;
 }
 
 main {
@@ -118,6 +115,16 @@ footer .block {
   margin: 20px;
 }
 
+.layout--twocol-section.layout--twocol-section--33-67 > .layout-content > .layout__region--second,
+.layout--twocol-section.layout--twocol-section--67-33 > .layout-content > .layout__region--first {
+  flex: 0 1 67%;
+}
+
+.layout--twocol-section.layout--twocol-section--33-67 > .layout-content > .layout__region--first,
+.layout--twocol-section.layout--twocol-section--67-33 > .layout-content > .layout__region--second {
+  flex: 0 1 33%;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1080px;
@@ -139,6 +146,13 @@ footer .block {
 
 .layout-content {
   padding: 0 20px;
+}
+.layout--twocol-section > .layout-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.layout-content > .layout__region {
+  padding: 0 15px;
 }
 
 .layout__region {
@@ -504,6 +518,9 @@ h2.hero-subtitle em {
 
 .field--body {
   line-height: 1.5;
+}
+.field--body > p:first-child {
+  margin-top: 0;
 }
 
 .field--taxonomy {
