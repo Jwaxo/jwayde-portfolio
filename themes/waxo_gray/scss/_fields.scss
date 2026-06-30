@@ -60,3 +60,44 @@ h2.hero-subtitle {
   }
 
 }
+
+
+.field--title {
+  text-align: center;
+  .theme--light & {
+    color: functions.palette(vars.$colors, white, true);
+  }
+}
+
+.field--body {
+  line-height: 1.5;
+  > p:first-child {
+    margin-top: 0;
+  }
+}
+
+.field--taxonomy {
+  margin: 30px 0;
+
+  .field-label {
+    margin-bottom: 15px;
+  }
+
+  .field-value {
+    color: map.get(vars.$layout-colors, main, text);
+    font-size: map.get(vars.$font-size, giant);
+    font-style: italic;
+    font-weight: 700;
+  }
+}
+
+.field--field-tags {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+
+.field--field-skills-used {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}

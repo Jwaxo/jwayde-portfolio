@@ -145,31 +145,3 @@
     }
   }
 }
-
-.field--title {
-  text-align: center;
-  .theme--light & {
-    color: functions.palette(vars.$colors, white, true);
-  }
-}
-
-.field--body {
-  line-height: 1.5;
-  > p:first-child {
-    margin-top: 0;
-  }
-}
-
-.field--taxonomy {
-  margin-top: 30px;
-
-  .field-label {
-    margin-bottom: 15px;
-  }
-
-  .field-value {
-    color: functions.palette(vars.$colors, gray, medium-dark);
-    font-size: map.get(vars.$font-size, big);
-    margin-right: 20px;
-  }
-}
