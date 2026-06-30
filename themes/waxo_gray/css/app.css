@@ -168,6 +168,7 @@ footer .block {
   .layout--twocol-section.layout--twocol-section--33-67 > .layout-content > .layout__region--first,
   .layout--twocol-section.layout--twocol-section--67-33 > .layout-content > .layout__region--second {
     max-width: 33%;
+    min-width: 400px;
     width: auto;
   }
 }
@@ -423,10 +424,14 @@ h2.hero-subtitle em {
   font-size: 40px;
   font-style: italic;
   font-weight: 700;
+  line-height: 1;
 }
 
 .field--field-tags {
   background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
   padding: 15px;
 }
 

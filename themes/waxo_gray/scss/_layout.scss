@@ -86,6 +86,7 @@ footer {
   width: 100%;
   @include mixins.size-desktop {
     max-width: 33%;
+    min-width: 400px;
     width: auto;
   }
 }
