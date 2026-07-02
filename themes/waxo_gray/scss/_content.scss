@@ -17,11 +17,21 @@
 
   .views-row {
     opacity: 0;
-    transition: opacity .2s ease-in-out;
+    position: relative;
+    transition: opacity .2s ease-in-out, left .2s ease-in-out;
 
-    &.loaded {
+    &:nth-child(odd).loaded,
+    &:nth-child(even).loaded {
+      left: 0;
       opacity: 1;
     }
+    &:nth-child(odd) {
+      left: -200px;
+    }
+    &:nth-child(even) {
+      left: 200px;
+    }
+
   }
 
   .node {

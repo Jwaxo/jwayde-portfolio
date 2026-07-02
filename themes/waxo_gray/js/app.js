@@ -8,6 +8,7 @@ jQuery('.field--field-images').slick();
 
 // Make project rows visible once they are past 1/3 the way up the screen.
 const project_rows = jQuery('.views-view--project-list .views-row');
+project_rows.first().addClass('loaded');
 
 if (project_rows.length > 0) {
   jQuery(window).on('resize scroll', () => {
