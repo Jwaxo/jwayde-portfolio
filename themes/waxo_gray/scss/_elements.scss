@@ -34,7 +34,8 @@ body {
   }
 
   h1 {
-    font-size: map.get(vars.$font-size, billboard);
+    font-size: map.get(vars.$font-size, giant);
+    font-weight: 700;
   }
 
   h2 {

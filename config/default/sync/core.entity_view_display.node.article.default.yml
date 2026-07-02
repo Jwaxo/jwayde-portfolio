@@ -36,6 +36,32 @@ third_party_settings:
     allow_custom: false
     sections:
       -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+        components:
+          cfe12930-7985-48b5-8eb1-8c057bcd7b24:
+            uuid: cfe12930-7985-48b5-8eb1-8c057bcd7b24
+            region: content
+            configuration:
+              id: 'field_block:node:article:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
         layout_id: layout_twocol_section
         layout_settings:
           label: ''
