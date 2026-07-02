@@ -352,7 +352,7 @@ li.tabs li.is-active:hover {
 }
 @media (min-width: 1080px) {
   .hero {
-    min-height: 600px;
+    min-height: 50vh;
   }
 }
 
