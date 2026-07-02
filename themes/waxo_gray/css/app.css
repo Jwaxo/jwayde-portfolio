@@ -458,7 +458,7 @@ h2.hero-subtitle em {
 .views-view--project-list .views-row.loaded {
   opacity: 1;
 }
-.views-view--project-list .node-inner {
+.views-view--project-list .node {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -466,13 +466,13 @@ h2.hero-subtitle em {
   justify-content: flex-start;
 }
 @media (min-width: 1280px) {
-  .views-view--project-list .node-inner {
+  .views-view--project-list .node {
     flex-direction: row;
     text-align: left;
   }
 }
 @media (min-width: 1280px) {
-  .views-view--project-list .views-row:nth-child(even) .node-inner {
+  .views-view--project-list .views-row:nth-child(even) .node {
     flex-direction: row-reverse;
     text-align: right;
   }
@@ -483,14 +483,10 @@ h2.hero-subtitle em {
   z-index: 1;
 }
 .views-view--project-list a.node-inner:hover .field--field-thumbnail {
-  opacity: 0.4;
+  opacity: 0.2;
 }
 .views-view--project-list a.node-inner:hover .title {
   opacity: 1;
-}
-.views-view--project-list a.node-inner:hover .field--field-tagline {
-  color: #000;
-  text-decoration: underline;
 }
 .views-view--project-list .field--field-thumbnail {
   opacity: 1;
@@ -522,12 +518,10 @@ h2.hero-subtitle em {
   text-shadow: 2px 2px 5px #666;
 }
 .views-view--project-list .field--field-tagline {
+  color: #000;
   padding: 30px;
 }
 .views-view--project-list .views-row:nth-child(3n+3) .field--field-tagline {
-  color: #000;
-}
-.views-view--project-list .views-row:nth-child(3n+3) a.node-inner:hover .field--field-tagline {
   color: #1fab57;
 }
 

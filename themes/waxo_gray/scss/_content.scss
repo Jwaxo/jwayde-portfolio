@@ -24,7 +24,7 @@
     }
   }
 
-  .node-inner {
+  .node {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -35,7 +35,7 @@
       text-align: left;
     }
   }
-  .views-row:nth-child(even) .node-inner {
+  .views-row:nth-child(even) .node {
     @include mixins.size-widescreen() {
       flex-direction: row-reverse;
       text-align: right;
@@ -48,14 +48,10 @@
     z-index: 1;
     &:hover {
       .field--field-thumbnail {
-        opacity: .4;
+        opacity: .2;
       }
       .title {
         opacity: 1;
-      }
-      .field--field-tagline {
-        color: map.get(vars.$layout-colors, main, text);
-        text-decoration: underline;
       }
     }
   }
@@ -93,14 +89,12 @@
   }
 
   .field--field-tagline {
+    color: map.get(vars.$layout-colors, main, text);
     padding: 30px;
   }
 
   .views-row:nth-child(3n+3) {
     .field--field-tagline {
-      color: map.get(vars.$layout-colors, main, text);
-    }
-    a.node-inner:hover .field--field-tagline {
       color: map.get(vars.$layout-colors, main, highlight);
     }
   }

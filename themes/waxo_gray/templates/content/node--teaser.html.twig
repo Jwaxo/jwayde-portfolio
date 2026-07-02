@@ -69,7 +69,8 @@
 <article{{ attributes }}>
 
   <a{{ content_attributes.addClass('node-inner') }} href="{{ url }}" title="Learn more about {{ node.title.value }}">
-    {{ content }}
+    {{ content|without('field_tagline') }}
   </a>
+  {{ content.field_tagline }}
 
 </article>
