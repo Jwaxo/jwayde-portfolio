@@ -69,13 +69,6 @@ h2.hero-subtitle {
   }
 }
 
-.field--body {
-  line-height: 1.5;
-  > p:first-child {
-    margin-top: 0;
-  }
-}
-
 .field--taxonomy {
   margin: 30px 0;
 
@@ -85,6 +78,16 @@ h2.hero-subtitle {
 
   .field-value {
     color: map.get(vars.$layout-colors, main, text);
+  }
+}
+
+.field--field-tags {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  gap: 25px;
+
+  .field-value {
     font-size: map.get(vars.$font-size, giant);
     font-style: italic;
     font-weight: 700;
@@ -92,16 +95,28 @@ h2.hero-subtitle {
   }
 }
 
-.field--field-tags {
-  background-color: rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 15px;
+.field--body,
+.field--field-live-url,
+.field--field-client,
+.field--field-source-status,
+.field--field-time-period {
+  font-size: map.get(vars.$font-size, big);
+  line-height: 1.5;
 }
 
 .field--field-skills-used {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+
+  .field-value {
+    // font-size: map.get(vars.$font-size, huge);
+    border: 1px solid functions.palette(vars.$layout-colors, main, shadow);
+    border-radius: 10px;
+    padding: 10px;
+  }
+}
+
+.field--body > p:first-child {
+  margin-top: 0;
 }

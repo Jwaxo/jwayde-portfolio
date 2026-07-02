@@ -406,13 +406,6 @@ h2.hero-subtitle em {
   color: #fff;
 }
 
-.field--body {
-  line-height: 1.5;
-}
-.field--body > p:first-child {
-  margin-top: 0;
-}
-
 .field--taxonomy {
   margin: 30px 0;
 }
@@ -421,24 +414,43 @@ h2.hero-subtitle em {
 }
 .field--taxonomy .field-value {
   color: #000;
+}
+
+.field--field-tags {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: no-wrap;
+  gap: 25px;
+}
+.field--field-tags .field-value {
   font-size: 40px;
   font-style: italic;
   font-weight: 700;
   line-height: 1;
 }
 
-.field--field-tags {
-  background-color: rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding: 15px;
+.field--body,
+.field--field-live-url,
+.field--field-client,
+.field--field-source-status,
+.field--field-time-period {
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 .field--field-skills-used {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+.field--field-skills-used .field-value {
+  border: 1px solid #666;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.field--body > p:first-child {
+  margin-top: 0;
 }
 
 /**
@@ -572,7 +584,6 @@ h2.hero-subtitle em {
 
 .image-zoom-container {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   overflow: hidden;
