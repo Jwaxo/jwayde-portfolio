@@ -347,10 +347,11 @@ li.tabs li.is-active:hover {
  * Drupal field and field component styling.
  */
 .hero {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  position: relative;
 }
 @media (min-width: 1080px) {
   .hero {
@@ -385,6 +386,75 @@ h2.hero-subtitle em {
   width: 100%;
   height: auto;
   z-index: -999;
+}
+
+@keyframes bigbounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100px);
+  }
+}
+@keyframes mediumbounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50px);
+  }
+}
+@keyframes smallbounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-25px);
+  }
+}
+@keyframes bigsquish {
+  from {
+    transform: scaleY(1) translateY(0);
+  }
+  to {
+    transform: scaleY(75%) translateY(25%);
+  }
+}
+@keyframes mediumsquish {
+  from {
+    transform: scaleY(1) translateY(0);
+  }
+  to {
+    transform: scaleY(87.5%) translateY(12.5%);
+  }
+}
+@keyframes smallsquish {
+  from {
+    transform: scaleY(1) translateY(0);
+  }
+  to {
+    transform: scaleY(93.75%) translateY(6.25%);
+  }
+}
+.toaster {
+  bottom: 50px;
+  border: 5px solid black;
+  border-radius: 50%;
+  display: block;
+  height: 75px;
+  opacity: 0;
+  position: fixed;
+  transition: opacity 0.35s ease-in;
+  width: 75px;
+  z-index: 999;
+}
+.toaster.visible {
+  animation: 0.475s ease-out bigbounce, 0.475s ease-out 0.475s reverse bigbounce, 0.05s linear 0.95s bigsquish, 0.05s linear 1s reverse bigsquish, 0.2375s ease-out 1.05s mediumbounce, 0.2375s ease-out 1.2875s reverse mediumbounce, 0.025s linear 1.525s mediumsquish, 0.025s linear 1.55s reverse mediumsquish, 0.12s ease-out 1.575s smallbounce, 0.12s ease-out 1.7s reverse smallbounce, 0.01s linear 1.92s smallsquish, 0.01s linear 1.93s reverse smallsquish;
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+.toaster.visible.finished {
+  opacity: 0;
 }
 
 .footer-image {
