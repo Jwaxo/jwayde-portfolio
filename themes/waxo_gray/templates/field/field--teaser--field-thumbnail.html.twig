@@ -6,5 +6,8 @@
 {% extends 'field--inline.html.twig' %}
 
 {% block field_prefix %}
-  <span class="title">{{ element['#object'].title.value }}</span>
+  <span class="title">
+    <h4>{{ element['#object'].title.value }}</h4>
+    <span class="button button--cta">{{ "Click to learn more"|t }}</span>
+  </span>
 {% endblock %}

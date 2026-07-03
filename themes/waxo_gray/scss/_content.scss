@@ -74,6 +74,8 @@
     align-items: center;
     color: black;
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     height: 100%;
     max-width: 1040px;
     opacity: 0;
@@ -87,14 +89,14 @@
     transition: opacity .2s ease-in-out;
   }
 
-  .title,
+  .title h4,
   .field--field-tagline {
     font-family: vars.$headline-font;
     font-size: 42px;
     font-weight: bold;
   }
 
-  .title {
+  .title h4 {
     text-shadow: 2px 2px 5px map.get(vars.$layout-colors, main, shadow);
   }
 

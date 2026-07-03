@@ -72,3 +72,14 @@ body {
     margin-left: 0;
   }
 }
+
+.button {
+  border: 1px solid functions.palette(vars.$layout-colors, main, text);
+  border-radius: 10px;
+  background-color: functions.palette(vars.$layout-colors, main, button);
+  display: block;
+  font-size: map.get(vars.$font-size, big);
+  font-weight: normal;
+  line-height: 1;
+  padding: 15px 15px 10px 15px;
+}

@@ -126,7 +126,7 @@ h2.hero-subtitle {
 
   &:after,
   &:before {
-    border: solid functions.palette(vars.$layout-colors, main, main);
+    border: solid functions.palette(vars.$layout-colors, main, text);
     content: '';
     display: block;
     position: absolute;

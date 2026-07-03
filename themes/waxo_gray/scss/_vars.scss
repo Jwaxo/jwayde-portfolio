@@ -32,6 +32,7 @@ $headline-font: fonts.$lato-normal;
 $colors: (
   white: (
     true: #fff,
+    semi: rgba(255, 255, 255, .6),
   ),
   gray: (
     light: #ddd,
@@ -62,6 +63,7 @@ $layout-colors: (
   ),
   main: (
     bg: functions.palette($colors, gray, light),
+    button: functions.palette($colors, white, semi),
     highlight: functions.palette($colors, green, highlight),
     lowlight: functions.palette($colors, blue, light),
     text: functions.palette($colors, black, true),
