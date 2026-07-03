@@ -97,10 +97,12 @@ h2.hero-subtitle {
 }
 
 .toaster {
+  align-items: center;
   bottom: 50px;
-  border: 5px solid black;
+  box-shadow: 0 0 20px white, inset 0 0 50px white;
+  border: 6px solid functions.palette(vars.$layout-colors, main, text);
   border-radius: 50%;
-  display: block;
+  display: flex;
   height: 75px;
   opacity: 0;
   position: fixed;
@@ -116,10 +118,36 @@ h2.hero-subtitle {
       .01s linear 1.92s smallsquish, .01s linear 1.93s reverse smallsquish;
     opacity: 1;
     transition: opacity .5s ease-in;
-    &.finished {
+    &.finished,
+    &:hover {
       opacity: 0;
     }
   }
+
+  &:after,
+  &:before {
+    border: solid functions.palette(vars.$layout-colors, main, main);
+    content: '';
+    display: block;
+    position: absolute;
+  }
+
+  &:before {
+    border-width: 0 6px 0 0;
+    height: 75%;
+    left: -12px;
+    width: 75%;
+  }
+
+  &:after {
+    border-width: 0 0 6px 6px;
+    bottom: 10px;
+    height: 50%;
+    left: 15px;
+    transform: rotateZ(-45deg);
+    width: 50%;
+  }
+
 }
 
 .footer-image {

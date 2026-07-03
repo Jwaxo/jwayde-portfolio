@@ -437,10 +437,12 @@ h2.hero-subtitle em {
   }
 }
 .toaster {
+  align-items: center;
   bottom: 50px;
-  border: 5px solid black;
+  box-shadow: 0 0 20px white, inset 0 0 50px white;
+  border: 6px solid #000;
   border-radius: 50%;
-  display: block;
+  display: flex;
   height: 75px;
   opacity: 0;
   position: fixed;
@@ -453,8 +455,28 @@ h2.hero-subtitle em {
   opacity: 1;
   transition: opacity 0.5s ease-in;
 }
-.toaster.visible.finished {
+.toaster.visible.finished, .toaster.visible:hover {
   opacity: 0;
+}
+.toaster:after, .toaster:before {
+  border: solid;
+  content: "";
+  display: block;
+  position: absolute;
+}
+.toaster:before {
+  border-width: 0 6px 0 0;
+  height: 75%;
+  left: -12px;
+  width: 75%;
+}
+.toaster:after {
+  border-width: 0 0 6px 6px;
+  bottom: 10px;
+  height: 50%;
+  left: 15px;
+  transform: rotateZ(-45deg);
+  width: 50%;
 }
 
 .footer-image {
