@@ -739,6 +739,23 @@ h2.hero-subtitle em {
   max-width: 90%;
   top: 15px;
 }
+.slick-slide-wrapper .toaster-container {
+  position: absolute;
+  top: 85%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.slick-slide-wrapper .toaster {
+  pointer-events: none;
+  position: relative;
+  z-index: 1;
+}
+.slick-slide-wrapper:hover .toaster {
+  opacity: 0;
+}
 
 .image-zoom-container {
   align-items: center;

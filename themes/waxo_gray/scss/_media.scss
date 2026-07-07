@@ -51,6 +51,24 @@
       top: 15px;
     }
   }
+
+  .toaster-container {
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  .toaster {
+    pointer-events: none;
+    position: relative;
+    z-index: 1;
+  }
+  &:hover .toaster {
+    opacity: 0;
+  }
 }
 
 .image-zoom-container {
