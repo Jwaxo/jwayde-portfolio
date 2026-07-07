@@ -714,6 +714,7 @@ h2.hero-subtitle em {
   position: relative;
 }
 .slick-slide-wrapper .field--field-media-image img {
+  background-color: white;
   max-height: -moz-max-content;
   max-height: max-content;
   max-width: 100%;
