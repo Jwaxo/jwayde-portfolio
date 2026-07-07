@@ -806,3 +806,19 @@ img.zoomImg {
 .field--field-caption p {
   margin: 0;
 }
+
+.slick-prev, .slick-next {
+  border: 2px solid black;
+  border-radius: 15%;
+  box-shadow: 0 0 20px white, inset 0 0 20px white;
+  height: 40px;
+  opacity: 0.75;
+  transition: opacity 0.2s linear;
+  width: 25px;
+}
+.slick-prev:before, .slick-next:before {
+  color: black;
+}
+.slick-prev:hover, .slick-next:hover {
+  opacity: 1;
+}

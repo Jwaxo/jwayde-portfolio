@@ -4,9 +4,9 @@
 core:
   css:
     theme:
+      css/slick.css: {}
       css/app.css:
         minified: true
-      css/slick.css: {}
   js:
     js/slick.min.js:
       preprocess: false

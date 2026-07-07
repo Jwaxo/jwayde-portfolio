@@ -114,3 +114,19 @@ img.zoomImg {
     margin: 0;
   }
 }
+
+.slick-prev, .slick-next {
+  border: 2px solid black;
+  border-radius: 15%;
+  box-shadow: 0 0 20px white, inset 0 0 20px white;
+  height: 40px;
+  opacity: .75;
+  transition: opacity .2s linear;
+  width: 25px;
+  &:before {
+    color: black;
+  }
+  &:hover {
+    opacity: 1;
+  }
+}
