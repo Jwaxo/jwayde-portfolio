@@ -128,6 +128,18 @@ function waxo_gray_preprocess_field(&$variables) {
 
       break;
 
+    case "field_media_image":
+      // Determine whether to show the phone or the laptop frame on top of the
+      // screenshot.
+      if ($variables['items'][0]['content']['#item']) {
+        $width = $variables['items'][0]['content']['#item']->get('width')->getValue();
+        if ($width < 1200) {
+          $variables['is_mobile'] = TRUE;
+        }
+      }
+
+      break;
+
   }
 }
 

@@ -7,8 +7,8 @@ dependencies:
     - field.field.media.image.field_media_image
     - media.type.image
   module:
+    - image
     - layout_builder
-    - waxo_imagefield_zoom
 third_party_settings:
   layout_builder:
     enabled: false
@@ -21,16 +21,13 @@ bundle: image
 mode: slick
 content:
   field_media_image:
-    type: waxo_imagezoom_field_formatter
+    type: image
     label: hidden
     settings:
-      image_style: large
-      zoomed_image_style: max_2600x2600
-      responsive_image_style: slides
-      image_zoom_style: mouseover
-      image_touchscreen_compatible: '1'
-      image_magnify: '1'
-      image_fade_duration: '120'
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 3
     region: content
