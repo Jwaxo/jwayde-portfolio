@@ -728,7 +728,22 @@ h2.hero-subtitle em {
 .slick-slide-wrapper.desktop .field--field-media-image {
   aspect-ratio: 1.5;
   max-width: 93%;
-  top: 19px;
+  top: 2px;
+}
+@media (min-width: 760px) {
+  .slick-slide-wrapper.desktop .field--field-media-image {
+    top: 5px;
+  }
+}
+@media (min-width: 1080px) {
+  .slick-slide-wrapper.desktop .field--field-media-image {
+    top: 10px;
+  }
+}
+@media (min-width: 1280px) {
+  .slick-slide-wrapper.desktop .field--field-media-image {
+    top: 19px;
+  }
 }
 .slick-slide-wrapper.mobile {
   margin: 0 auto;

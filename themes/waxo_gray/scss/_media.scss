@@ -39,7 +39,16 @@
     .field--field-media-image {
       aspect-ratio: 1.5;
       max-width: 93%;
-      top: 19px;
+      top: 2px;
+      @include mixins.size-mobile {
+        top: 5px;
+      }
+      @include mixins.size-desktop {
+        top: 10px;
+      }
+      @include mixins.size-widescreen {
+        top: 19px;
+      }
     }
   }
   &.mobile {
