@@ -13,9 +13,6 @@ if (home_toaster.length > 0) {
   home_toaster.addClass('visible');
 }
 
-jQuery(window).on('resize scroll', () => {
-});
-
 const screen_toaster = jQuery('.toaster--screen');
 const container = screen_toaster.parent().parent();
 let screen_toaster_min = getToasterMin(container, .5);
@@ -32,7 +29,8 @@ project_rows.first().addClass('loaded');
 
 if (project_rows.length > 0) {
   jQuery(window).on('resize scroll', () => {
-    home_toaster.toggleClass('finished', getScrollDistance(jQuery(window)) > getToasterMin(jQuery(window)));
+    const distance = getScrollDistance(jQuery(window));
+    home_toaster.toggleClass('finished', distance > getToasterMin(jQuery(window)));
     project_rows.each((index, row) => {
       if (jQuery(row).offset().top < distance) {
         jQuery(row).addClass('loaded');
