@@ -16,7 +16,7 @@ nav.nav--menu {
   a.home-link {
     display: block;
     color: map.get(vars.$layout-colors, header, headline);
-    flex-grow: 2;
+    flex: 1;
     font-size: map.get(vars.$font-size, giant);
     font-style: italic;
     font-weight: 700;

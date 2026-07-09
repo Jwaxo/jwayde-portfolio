@@ -202,7 +202,7 @@ nav.nav--menu {
 nav.nav--menu a.home-link {
   display: block;
   color: #1fab57;
-  flex-grow: 2;
+  flex: 1;
   font-size: 40px;
   font-style: italic;
   font-weight: 700;
