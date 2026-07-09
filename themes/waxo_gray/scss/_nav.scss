@@ -57,17 +57,33 @@ nav.nav--menu {
 
 ul.menu,
 ol.menu {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
   list-style: none;
   margin: 16px 0;
   padding: 0;
 
   li {
     list-style: none;
-    margin: 0;
+    margin: 0 0 5px;
     padding: 0;
+    text-align: center;
 
     a {
       text-decoration: none;
+    }
+  }
+
+  @include mixins.size-mobile {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 16px 0;
+
+    li {
+      margin: 0;
+      // text-align: left;
     }
   }
 }

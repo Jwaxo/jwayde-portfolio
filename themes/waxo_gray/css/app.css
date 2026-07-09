@@ -238,6 +238,10 @@ nav.nav--menu a.home-link:after {
 
 ul.menu,
 ol.menu {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
   list-style: none;
   margin: 16px 0;
   padding: 0;
@@ -245,12 +249,25 @@ ol.menu {
 ul.menu li,
 ol.menu li {
   list-style: none;
-  margin: 0;
+  margin: 0 0 5px;
   padding: 0;
+  text-align: center;
 }
 ul.menu li a,
 ol.menu li a {
   text-decoration: none;
+}
+@media (min-width: 760px) {
+  ul.menu,
+  ol.menu {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 16px 0;
+  }
+  ul.menu li,
+  ol.menu li {
+    margin: 0;
+  }
 }
 
 header ul.menu li {
